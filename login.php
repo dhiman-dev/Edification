@@ -10,7 +10,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="css/style.css">
   </head>
 <body>
   <section class="content">
@@ -22,11 +22,9 @@
         <h2>Welcome to<br><span style="color: #6358DC; font-family: 'Poppins'; font-weight: 700; font-size: 48px;">Edification!</span></h2>
       </div>
       <div class="login-form">
-        <form action="action_page.php" method="post">
-          <!--<div class="imgcontainer">
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
-          </div>-->
-        
+        <!-- login action page -->
+        <form action="login_action_page.php" method="post">
+          
           <div class="container">
             <div class="place-holder">
               <div class="logo">
@@ -34,7 +32,8 @@
               </div>
               <div>
                 <label for="uname"><b>Username</b></label><br>
-                <input type="text" placeholder="" name="uname" required>
+                <!-- username -->
+                <input type="text" placeholder="" name="username" required>
               </div>
               
             </div>
@@ -44,7 +43,8 @@
               </div>
               <div>
                 <label for="psw"><b>Password</b></label><br>
-                <input type="password" placeholder="" name="psw" required>
+                <!-- password -->
+                <input type="password" placeholder="" name="password" required>
               </div>
             </div>
             <div class="rem-pass">
@@ -66,4 +66,3 @@
   </section>
 </body>
 </html>
-

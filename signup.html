@@ -10,7 +10,7 @@
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="signup.css">
+      <link rel="stylesheet" href="css/signup.css">
   </head>
 <body>
   <section class="content">
@@ -19,16 +19,18 @@
     </div>
     <div class="login-container">
       <div class="login-form">
-        <form action="action_page.php" method="post">
-        
+        <!-- info goes to signup action page -->
+        <form action="signup_action_page.php" method="post">
+          
           <div class="container">
             <div class="place-holder">
               <div class="logo">
                 <img src="/img/person_avatar_account_user_icon_191606.png" alt="">
               </div>
               <div>
-                <label for="ufname"><b>Full Name</b></label><br>
-                <input type="text" placeholder="" name="ufname" required>
+                <label for="fullname"><b>Full Name</b></label><br>
+                <!-- fullname -->
+                <input type="text" placeholder="" name="fullname" required>
               </div>
               
             </div>
@@ -37,8 +39,9 @@
                 <img src="/img/person_avatar_account_user_icon_191606.png" alt="">
               </div>
               <div>
-                <label for="uname"><b>Username</b></label><br>
-                <input type="text" placeholder="" name="uname" required>
+                <label for="username"><b>Username</b></label><br>
+                <!-- username -->
+                <input type="text" placeholder="" name="username" required>
               </div>
               
             </div>
@@ -47,8 +50,9 @@
                 <img src="/img/key_security_icon_195229.png" alt="" class="key">
               </div>
               <div>
-                <label for="psw"><b>Password</b></label><br>
-                <input type="password" placeholder="" name="psw" required>
+                <label for="password"><b>Password</b></label><br>
+                <!-- password -->
+                <input type="password" placeholder="" name="password" required>
               </div>
             </div>
             <div class="place-holder">
@@ -56,8 +60,9 @@
                 <img src="/img/1904660-email-envelope-letter-mail-message-post-send_122510.png" alt="">
               </div>
               <div>
-                <label for="uemail"><b>Email</b></label><br>
-                <input type="email" placeholder="" name="uemail" required>
+                <label for="mail"><b>Email</b></label><br>
+                <!-- mail -->
+                <input type="email" placeholder="" name="mail" required>
               </div>
               
             </div>
@@ -67,7 +72,8 @@
               </div>
               <div>
                 <label for="uage"><b>Age</b></label><br>
-                <input type="text" placeholder="" name="uage" required>
+                <!-- age -->
+                <input type="text" placeholder="" name="age" required>
               </div>
               
             </div>
@@ -77,7 +83,8 @@
               </div>
               <div>
                 <label for="uedu"><b>Education</b></label><br>
-                <input type="text" placeholder="" name="uedu" required>
+                <!-- education -->
+                <input type="text" placeholder="" name="education" required>
               </div>
               
             </div>
