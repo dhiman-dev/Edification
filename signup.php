@@ -15,7 +15,7 @@
 <body>
   <section class="content">
     <div class="img-container">
-      <img src="/img/img3.png" alt="">
+      <img src="img/img3.png" alt="">
     </div>
     <div class="login-container">
       <div class="login-form">
@@ -25,66 +25,66 @@
           <div class="container">
             <div class="place-holder">
               <div class="logo">
-                <img src="/img/person_avatar_account_user_icon_191606.png" alt="">
+                <img src="img/person_avatar_account_user_icon_191606.png" alt="">
               </div>
               <div>
                 <label for="fullname"><b>Full Name</b></label><br>
                 <!-- fullname -->
-                <input type="text" placeholder="" name="fullname" required>
+                <input type="text" placeholder="enter your full name" name="fullname" required>
               </div>
               
             </div>
             <div class="place-holder">
               <div class="logo">
-                <img src="/img/person_avatar_account_user_icon_191606.png" alt="">
+                <img src="img/person_avatar_account_user_icon_191606.png" alt="">
               </div>
               <div>
                 <label for="username"><b>Username</b></label><br>
                 <!-- username -->
-                <input type="text" placeholder="" name="username" required>
+                <input type="text" placeholder="enter your user-name" name="username" required>
               </div>
               
             </div>
             <div class="place-holder">
               <div class="logo">
-                <img src="/img/key_security_icon_195229.png" alt="" class="key">
+                <img src="img/key_security_icon_195229.png" alt="" class="key">
               </div>
               <div>
                 <label for="password"><b>Password</b></label><br>
                 <!-- password -->
-                <input type="password" placeholder="" name="password" required>
+                <input type="password" placeholder="enter your password" name="password" required>
               </div>
             </div>
             <div class="place-holder">
               <div class="logo">
-                <img src="/img/1904660-email-envelope-letter-mail-message-post-send_122510.png" alt="">
+                <img src="img/1904660-email-envelope-letter-mail-message-post-send_122510.png" alt="">
               </div>
               <div>
                 <label for="mail"><b>Email</b></label><br>
                 <!-- mail -->
-                <input type="email" placeholder="" name="mail" required>
+                <input type="email" placeholder="example@mail.com" name="mail" required>
               </div>
               
             </div>
             <div class="place-holder">
               <div class="logo">
-                <img src="/img/age_theapplication_3019.png" alt="">
+                <img src="img/age_theapplication_3019.png" alt="">
               </div>
               <div>
                 <label for="uage"><b>Age</b></label><br>
                 <!-- age -->
-                <input type="text" placeholder="" name="age" required>
+                <input type="text" placeholder="enter your age" name="age" required>
               </div>
               
             </div>
             <div class="place-holder">
               <div class="logo">
-                <img src="/img/3586376-book-education-learning-teacher_107951.png" alt="">
+                <img src="img/3586376-book-education-learning-teacher_107951.png" alt="">
               </div>
               <div>
                 <label for="uedu"><b>Education</b></label><br>
                 <!-- education -->
-                <input type="text" placeholder="" name="education" required>
+                <input type="text" placeholder="enter your educational qualification" name="education" required>
               </div>
               
             </div>
@@ -98,4 +98,3 @@
   </section>
 </body>
 </html>
-
