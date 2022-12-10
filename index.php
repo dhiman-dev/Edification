@@ -29,7 +29,7 @@
     <div class="left-col">
       <h2>Hello There!</h2>
       <p>having problem understanding a topic? looking for a way to start new courses? don’t worry!! we’ll guide you to your desire contents. Edification is a non-profit system where you can learn and contribute to any computer-science releted courses</p>
-      <button class="get-started-btn"><img src="/img/play-fill.png" alt=""> Get Started</button>
+      <button class="get-started-btn"><img src="img/play-fill.png" alt=""> Get Started</button>
     </div>
     <div class="right-col">
 

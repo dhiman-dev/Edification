@@ -15,7 +15,7 @@
 <body>
   <section class="content">
     <div class="img-container">
-      <img src="/img/img2.png" alt="">
+      <img src="img/img2.png" alt="">
     </div>
     <div class="login-container">
       <div class="title">
@@ -28,7 +28,7 @@
           <div class="container">
             <div class="place-holder">
               <div class="logo">
-                <img src="/img/person_avatar_account_user_icon_191606.png" alt="">
+                <img src="img/person_avatar_account_user_icon_191606.png" alt="">
               </div>
               <div>
                 <label for="uname"><b>Username</b></label><br>
@@ -39,7 +39,7 @@
             </div>
             <div class="place-holder">
               <div class="logo">
-                <img src="/img/key_security_icon_195229.png" alt="" class="key">
+                <img src="img/key_security_icon_195229.png" alt="" class="key">
               </div>
               <div>
                 <label for="psw"><b>Password</b></label><br>
@@ -60,7 +60,7 @@
 
       </div>
       <div class="reg">
-        <p>Don’t have an account? <a href="signup.html">Register Now</a></p>
+        <p>Don’t have an account? <a href="signup.php">Register Now</a></p>
       </div>
     </div>
   </section>
