@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
     require('connection.php');
     
     // When form submitted, insert values into the database.
@@ -31,7 +31,7 @@
         if ($result) {
             echo "<div class='form'>
                   <h3>You are registered successfully.</h3><br/>
-                  <p class='link'>Click here to <a href='login.php'>Login</a></p>
+                  <p class='link'>Click here <a href='login.php'>Login</a></p>
                   </div>";
         } 
         else {
@@ -41,4 +41,4 @@
                   </div>";
         }
     } 
-?>
+?> -->

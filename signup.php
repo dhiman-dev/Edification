@@ -20,7 +20,7 @@
     <div class="login-container">
       <div class="login-form">
         <!-- info goes to signup action page -->
-        <form action="signup_action_page.php" method="post">
+        <form action="" method="post">
           
           <div class="container">
             <div class="place-holder">
@@ -30,7 +30,7 @@
               <div>
                 <label for="fullname"><b>Full Name</b></label><br>
                 <!-- fullname -->
-                <input type="text" placeholder="enter your full name" name="fullname" required>
+                <input type="text" placeholder="enter your full name" name="fullname" style="font-size: 17px;" required>
               </div>
               
             </div>
@@ -41,7 +41,7 @@
               <div>
                 <label for="username"><b>Username</b></label><br>
                 <!-- username -->
-                <input type="text" placeholder="enter your user-name" name="username" required>
+                <input type="text" placeholder="enter your user-name" name="username" style="font-size: 17px;" required>
               </div>
               
             </div>
@@ -52,7 +52,7 @@
               <div>
                 <label for="password"><b>Password</b></label><br>
                 <!-- password -->
-                <input type="password" placeholder="enter your password" name="password" required>
+                <input type="password" placeholder="enter your password" name="password" style="font-size: 17px;" required>
               </div>
             </div>
             <div class="place-holder">
@@ -62,7 +62,7 @@
               <div>
                 <label for="mail"><b>Email</b></label><br>
                 <!-- mail -->
-                <input type="email" placeholder="example@mail.com" name="mail" required>
+                <input type="email" placeholder="example@mail.com" name="mail" style="font-size: 17px;" required>
               </div>
               
             </div>
@@ -73,7 +73,7 @@
               <div>
                 <label for="uage"><b>Age</b></label><br>
                 <!-- age -->
-                <input type="text" placeholder="enter your age" name="age" required>
+                <input type="text" placeholder="enter your age" name="age" style="font-size: 17px;" required>
               </div>
               
             </div>
@@ -84,11 +84,9 @@
               <div>
                 <label for="uedu"><b>Education</b></label><br>
                 <!-- education -->
-                <input type="text" placeholder="enter your educational qualification" name="education" required>
+                <input type="text" placeholder="enter your educational qualification" name="education" style="font-size: 17px;" required>
               </div>
-              
             </div>
-            
             <button type="submit">Creat Account</button>
           </div>
         </form>
@@ -98,3 +96,51 @@
   </section>
 </body>
 </html>
+
+
+<?php
+    require('connection.php');
+    
+    // When form submitted, insert values into the database.
+    if (isset($_REQUEST['username'])) {
+        // removes backslashes
+        $fullname = stripslashes($_REQUEST['fullname']);
+        //escapes special characters in a string
+        $fullname = mysqli_real_escape_string($con, $fullname);
+
+        $username = stripslashes($_REQUEST['username']);
+        $username = mysqli_real_escape_string($con, $username);
+
+        $password = stripslashes($_REQUEST['password']);
+        $password = mysqli_real_escape_string($con, $password);
+        
+        $mail = stripslashes($_REQUEST['mail']);
+        $mail = mysqli_real_escape_string($con, $mail);
+        
+        $age = stripslashes($_REQUEST['age']);
+        $age = mysqli_real_escape_string($con, $age);
+
+        $education = stripslashes($_REQUEST['education']);
+        $education = mysqli_real_escape_string($con, $education);
+
+        $query = "INSERT INTO `users` (`full_name`, `username`, `password`, `mail`, `age`, `education`) 
+                  VALUES ('$fullname', '$username', '$password', '$mail', '$age', '$education')";
+
+        $result = mysqli_query($con, $query);
+        
+        if ($result) {
+          // echo "<script>alert('You are registered successfully.')</script>";
+            echo "<div class='form'>
+                  <h3>You are registered successfully.</h3><br/>
+                  <p class='link'>Click here <a href='login.php'>Login</a></p>
+                  </div>";
+        } 
+        else {
+          // echo "<script>alert('Required fields are missing.')</script>";
+            echo "<div class='form'>
+                  <h3>Required fields are missing.</h3><br/>
+                  <p class='link'>Click here to <a href='registration.php'>registration</a> again.</p>
+                  </div>";
+        }
+    } 
+?>
