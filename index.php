@@ -15,12 +15,12 @@
   <header id="header">
     <div class="nav">
       <ul id="nav-bar">
-        <li> <a href="courses.html">Courses</a></li>
-        <li> <a href="contribute.html">Contribute</a></li>
-        <li> <a href="faq.html">FAQ</a></li>
-        <li> <a href="contact.html">Contact Us</a></li>
-        <li> <a href="about.html">About Us</a></li>
-        <li><button class="login-btn">Log In</button></li>
+        <li> <a href="login.php">Courses</a></li>
+        <li> <a href="login.php">Contribute</a></li>
+        <li> <a href="login.php">FAQ</a></li>
+        <li> <a href="#">Contact Us</a></li>
+        <li> <a href="#">About Us</a></li>
+        <li> <button class="login-btn"> <a href="login.php">Log In</a></button></li>
       </ul>
     </div>
   </header>
@@ -28,8 +28,9 @@
   <section class="section-p1">
     <div class="left-col">
       <h2>Hello There!</h2>
-      <p>having problem understanding a topic? looking for a way to start new courses? don’t worry!! we’ll guide you to your desire contents. Edification is a non-profit system where you can learn and contribute to any computer-science releted courses</p>
-      <button class="get-started-btn"><img src="img/play-fill.png" alt=""> Get Started</button>
+      <p>having problem understanding a topic? looking for a way to start new courses? don’t worry!! we’ll guide you to your desire contents. 
+        Edification is a non-profit system where you can learn and contribute to any computer-science releted courses</p>
+      <button class="get-started-btn"><img src="img/play-fill.png" alt=""> <a href="login.php"> Get Started </a></button>
     </div>
     <div class="right-col">
 

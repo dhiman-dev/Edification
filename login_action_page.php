@@ -20,7 +20,7 @@
         if ($rows == 1) {
             $_SESSION['username'] = $username;
             // Redirect to user dashboard page
-            // header("Location: dashboard.php");
+            header("Location: dashboard.php");
             echo "<div class='form'>
                   <h3> is successfully logged in.</h3><br/>
                   </div>";
@@ -31,10 +31,5 @@
                   </div>";
         }
     } 
-    else {
-        echo "<div class='form'>
-                  <h3>something is wrong.</h3><br/>
-                  <p class='link'>Click here to <a href='login.php'>Login</a> again.</p>
-                  </div>";
-    }
+       
 ?>
