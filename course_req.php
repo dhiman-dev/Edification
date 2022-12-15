@@ -5,16 +5,14 @@ include("connection.php");
 $req = "select * from users ";
 $re = mysqli_query($con, $req);
 $list = mysqli_fetch_all($re,MYSQLI_ASSOC);
+
 if(isset($_POST['req'])){
+	$request = $_POST['request'];
+
+  $query = "insert into course_req (req) values ('$request')";
+	mysqli_query($con, $query);
 	
-    $request = $_POST['request'];
-		
-	$query = "insert into course_req (req) values ('$request')";
-
-			mysqli_query($con, $query);
-
-			
-			die;
+  die;
 }
 ?>
 
@@ -30,18 +28,28 @@ if(isset($_POST['req'])){
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <header id="header">
-    <div class="nav">
-      <ul id="nav-bar">
-        <li> <a href="courses.html">Courses</a></li>
-        <li> <a href="contribute.html">Contribute</a></li>
-        <li> <a href="faq.html">FAQ</a></li>
-        <li> <a href="contact.html">Contact Us</a></li>
-        <li> <a href="about.html">About Us</a></li>
-        <li><button class="login-btn">Log In</button></li>
+    
+    
+    <header id="main-header">
+    <div class="dash-nav">
+      <ul>
+        <li> <a href="dashboard.php">Home</a></li>
+        <li> <a href="#">Your Courses</a></li>
+        <li> <a href="all_courses.php">All Courses</a></li>
+        <li> <a href="#">Contribute</a></li>
       </ul>
+    </div>
+    <div id="topbar" class="section-p1">
+      <div class="searchbar">
+        <input type="text" placeholder="search for courses/topics...">
+        <img src="img/magnifying-glass.png" alt="" style="width: 30px;">
+      </div>
+      <div class="profile">
+        <button class="drpdwn-btn">
+          <img src="img/person_avatar_account_user_icon_191606.png" alt="" class="pro-icon" style="width: 50px;"> 
+          <img src="img/down.png" alt="" class="dwn-icon">
+        </button>
+      </div>
     </div>
   </header>
 
@@ -57,10 +65,18 @@ if(isset($_POST['req'])){
   <form class="form-style-4" action="" method="POST" >
 		<h2>Enter the course name you are wanting for</h2>
         <label for="field1">
-            <span>Enter name</span><input type="text" name="request"  />
-            <span> </span><input type="submit" value="Post" name="req" />
+            <span>Enter name</span> <input type="text" name="request"/>
+            <span> <input type="submit" value="Post" name="req"/> </span> 
         </label>
 	</form>
   </section>
+
+  <footer class="footer">
+    <p>© 2022 Edification</p>
+    <a href="" class="footer-btn">About Us</a>
+    <a href="" class="footer-btn">Contact Us</a>
+    <a href="" class="footer-btn">FAQ</a>
+  </footer>
+
 </body>
 </html>

@@ -1,83 +1,52 @@
-<?php 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header id="main-header">
+    <div class="dash-nav">
+      <ul>
+        <li> <a href="dashboard.php">Home</a></li>
+        <li> <a href="#">Your Courses</a></li>
+        <li> <a href="all_courses.php">All Courses</a></li>
+        <li> <a href="#">Contribute</a></li>
+      </ul>
+    </div>
+    <div id="topbar" class="section-p1">
+      <div class="searchbar">
+        <input type="text" placeholder="search for courses/topics...">
+        <img src="img/magnifying-glass.png" alt="" style="width: 30px;">
+      </div>
+      <div class="profile">
+        <button class="drpdwn-btn">
+          <img src="img/person_avatar_account_user_icon_191606.png" alt="" class="pro-icon" style="width: 50px;"> 
+          <img src="img/down.png" alt="" class="dwn-icon">
+        </button>
+      </div>
+    </div>
+  </header>
 
-    include('connection.php');
-    include('login_action_page.php');
-?>
+  <section class="section-p1 dashboard">
+    <div class="greet">
+      <h3>Hello there!</h3>
+      <p>It's good to see you</p>
+    </div>
+  </section>
 
-<html>
-    <head>
-        <title>Home Page</title>
-        <link rel="stylesheet" href="css/dashboard.css"> 
-    </head>
-
-    <body>
-        <!--Menu starts-->
-        <div class="menu">
-        <div class="wrapper">
-              <ul>
-              <li><a href="index.php"> Profile</a></li>
-              <li><a href="#"> Home </a></li>
-              <li><a href="#"> Courses </a></li>
-              <li><a href="#"> Contribute </a></li>
-              <li><a href="index.php"> Logout</a></li>
-              </ul>
-        </div>
-        </div>
-        <!--Menu ends-->
-
-
-        <br/> <br/> <br/>
-
-            <div class="col-4 text-center">
-            <h1>All Course List</h1>
-            <br/>
-            <a href="#" class="btn-primary">View</a>
-            </div>
-            <br/> <br/> <br/>
-
-            <div class="col-4 text-center">
-            <h1>Discussion Portal</h1>
-            <br/>
-            <a href="#" class="btn-primary">View</a>
-            </div>
-            <br/> <br/> <br/>
-
-            <div class="col-4 text-center">
-            <h1>Contribute</h1>
-            <br/>
-            <a href="#" class="btn-primary">View</a>
-            </div>
-            <br/> <br/> <br/>
-
-            <div class="col-4 text-center">
-            <h1>Content Request</h1>
-            <br/>
-            <a href="#" class="btn-primary">Open Form</a>
-            </div>
-
-
-            <div class="clearfix"></div>
-            </div>
-            </div>
-
-
-<!--content ends-->
-
-       
-        
-         <!--footer starts-->
-        <div class="footer">
-        <div class="wrapper">
-              <ul>
-              <li><a href="#"> About us </a></li>
-              <li><a href="#"> Contuct us </a></li>
-              <li><a href="#"> FAQ </a></li>
-              </ul>
-              <p class="text-center">2022. Proudly made with depression! Developed by - <a href="#"> The Differentiate Trio</a></p>
-        </div>
-        </div>
-        <!--footer ends-->
-
-
-    </body>
+  <footer class="footer">
+    <p>© 2022 Edification</p>
+    <a href="" class="footer-btn">About Us</a>
+    <a href="" class="footer-btn">Contact Us</a>
+    <a href="" class="footer-btn">FAQ</a>
+  </footer>
+</body>
 </html>
