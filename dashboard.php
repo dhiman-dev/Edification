@@ -1,5 +1,10 @@
+<?php
+include("footer.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +16,20 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+  <!-- for background picture -->
+  <style>
+    body {
+      background-image: url('img/dashboard_backgroud.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      opacity: 10;
+    }
+  </style>
+  <!-- for background picture -->
+
   <header id="main-header">
     <div class="dash-nav">
       <ul>
@@ -26,31 +44,88 @@
         <input type="text" placeholder="search for courses/topics...">
         <img src="img/magnifying-glass.png" alt="" style="width: 30px;">
       </div>
+
+
+      <!-- profile dropdown menu starts-->
       <div class="profile">
-        <button class="drpdwn-btn">
-          <img src="img/person_avatar_account_user_icon_191606.png" alt="" class="pro-icon" style="width: 50px;"> 
+
+        <button onclick="myFunction()" class="drpdwn-btn">
+          <img src="img/person_avatar_account_user_icon_191606.png" alt="" class="pro-icon" style="width: 50px;">
           <img src="img/down.png" alt="" class="dwn-icon">
         </button>
+
+        <!-- dropdown menu goes here -->
+        <div id="myDropdown" class="dropdown-content">
+          <ul>
+            <li><a href="profile.php"> <img src="img/profile.jpg" style="width: 20px;"> Profile</a></li>
+            <li><a href="profile.php"> <img src="img/home.png" style="width: 20px;"> Home</a></li>
+            <li><a href="profile.php"> <img src="img/course.png" style="width: 20px;"> Courses</a></li>
+            <li><a href="profile.php"> <img src="img/edit.png" style="width: 20px;"> Edit</a></li>
+            <li><a href="profile.php"> <img src="img/setting.png" style="width: 20px;"> Setting</a></li>
+            <li><a href="profile.php"> <img src="img/logout.png" style="width: 20px;"> Log Out</a></li>
+          </ul>
+        </div>
+
+        <!-- src to js code for profile dropdown menu -->
+        <script src="js_code/profile_dropdown.js"> </script>
+
       </div>
+      <!-- profile dropdown menu ends-->
+
     </div>
   </header>
 
   <section class="section-p1 dashboard">
     <div class="greet">
-      <h3>Hello there!</h3>
-      <p>It's good to see you</p>
+      <h1>Hello there!</h1>
+      <h3>
+        <p>It's good to see you</p>
+      </h3>
     </div>
   </section>
-
-  <footer class="footer">
-    <p>© 2022 Edification</p>
-    <a href="" class="footer-btn">About Us</a>
-    <a href="" class="footer-btn">Contact Us</a>
-    <a href="" class="footer-btn">FAQ</a>
-    <a href="logout.php" class="footer-btn">Log out</a>
-  </footer>
 </body>
+
 </html>
 
 
+<style>
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
 
+  .dropbtn:hover,
+  .dropbtn:focus {
+    background-color: #2980B9;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 20px 16px;
+    text-decoration: double;
+    display: table;
+  }
+
+  .show {
+    display: block;
+  }
+</style>
