@@ -432,7 +432,7 @@ input[type="text"], input[type="password"] {
   background: url(/img/dashboard_backgroud.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-position-y: ;
+  /* background-position-y: ; */
 }
 
 .greet{
