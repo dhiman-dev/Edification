@@ -1,3 +1,7 @@
+<?php
+  include("footer.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -25,6 +29,7 @@
       opacity: 10;
     }
   </style>
+  <!-- for background picture -->
 
   <header id="main-header">
     <div class="dash-nav">
@@ -43,17 +48,20 @@
 
       <!-- profile dropdown menu starts-->
       <div class="profile">
-        
+
         <button onclick="myFunction()" class="drpdwn-btn">
           <img src="img/person_avatar_account_user_icon_191606.png" alt="" class="pro-icon" style="width: 50px;">
           <img src="img/down.png" alt="" class="dwn-icon">
         </button>
 
+        <!-- dropdown menu goes here -->
         <div id="myDropdown" class="dropdown-content">
-          <a href="def.php">Profile</a>
-          <a href="abd.php">Home</a>
-
-          <a href="logout.php">Log Out</a>
+          <img src="img/profile.jpg" href="#" alt="" style="width: 60px;"> Profile <br>
+          <img src="img/home.png" href="#" alt="" style="width: 60px;"> Home <br>
+          <img src="img/course.png" href="#" alt="" style="width: 60px;"> Courses <br>
+          <img src="img/edit.png" href="#" alt="" style="width: 60px;"> Edit <br>
+          <img src="img/setting.png" href="#" alt="" style="width: 60px;"> Setting <br>
+          <img src="img/logout.png" href="profile.php" alt="" style="width: 60px;"> Log Out <br>
         </div>
 
         <!-- src to js code for profile dropdown menu -->
@@ -74,19 +82,14 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <p>© 2022 Edification</p>
-    <a href="" class="footer-btn">About Us</a>
-    <a href="" class="footer-btn">Contact Us</a>
-    <a href="" class="footer-btn">FAQ</a>
-  </footer>
 </body>
 
 </html>
 
+
 <style>
   .dropbtn {
-    background-color: #3498DB;
+    background-color: #f1f1f1;
     color: white;
     padding: 16px;
     font-size: 16px;

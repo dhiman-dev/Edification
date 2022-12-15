@@ -429,7 +429,7 @@ input[type="text"], input[type="password"] {
 
 .dashboard{
   height: 70vh;
-  background: url(/img/dashboard_backgroud.png);
+  background: url(img/dashboard_backgroud.png);
   background-repeat: no-repeat;
   background-position: center;
   /* background-position-y: ; */
@@ -478,3 +478,4 @@ input[type="text"], input[type="password"] {
   font-size: 20px;
   font-weight: 600;
 }
+
