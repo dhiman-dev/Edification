@@ -12,6 +12,18 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  
+  <!-- for background picture -->
+  <style>
+    body {
+      background-image: url('img/dashboard_backgroud.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      opacity: 10;
+    }
+  </style>
+
   <header id="main-header">
     <div class="dash-nav">
       <ul>
@@ -37,8 +49,8 @@
 
   <section class="section-p1 dashboard">
     <div class="greet">
-      <h3>Hello there!</h3>
-      <p>It's good to see you</p>
+      <h1>Hello there!</h1>
+      <h3><p>It's good to see you</p></h3>
     </div>
   </section>
 

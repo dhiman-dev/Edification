@@ -36,12 +36,12 @@ if(isset($_POST['recovery'])){
             <div class="img" style="padding-left: 10%; padding-top: 5%;">
                 <img src="img/forget.png" alt="">
             </div>
-            <div class="forget-box" style="padding-left: 70px;">
+            <div class="forget-box" style="padding-left: 90px;">
+                <!-- <br>
                 <br>
                 <br>
-                <br>
-                <br>
-                <h1>Forget Password?</h1>
+                <br> -->
+                <h1>Forgot Password?</h1>
                 <form action="#" method="POST">
                     <!-- username feild -->
                     <h6 style="color: grey; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px;">Enter username & email address to get recovery</h6>
@@ -56,10 +56,14 @@ if(isset($_POST['recovery'])){
                     <br>
 
                     <button name="recovery" class="btnz" type="button" 
-                    style="background-color: white; color: white; height: 45px; width: 100px; border-radius: 10px; font-size: 20px; border-color: blue; margin-left: 100px;margin-top: 50px;" 
-                    value="submit"> <a href="login.php">submit</a> </button>
+                        style="background-color: white; color: white; 
+                        height: 50px; width: 100px; border-radius: 10px; 
+                        font-size: 20px; border-color: blue; margin-left: 100px;
+                        margin-top: 50px;" 
+                        value="submit"> <a href="login.php">submit</a> 
+                    </button>
                 </form>
-                <div class="back">
+                <div class="back" style="height: 40px; width: 100px;">
                     <a href="login.php">Back</a>
                 </div>
             </div>
