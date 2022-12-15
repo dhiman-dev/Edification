@@ -1,5 +1,5 @@
 <?php
-  include("footer.php");
+include("footer.php");
 ?>
 
 <!DOCTYPE html>
@@ -56,14 +56,16 @@
 
         <!-- dropdown menu goes here -->
         <div id="myDropdown" class="dropdown-content">
-          <img src="img/profile.jpg" href="#" alt="" style="width: 60px;"> Profile <br>
-          <img src="img/home.png" href="#" alt="" style="width: 60px;"> Home <br>
-          <img src="img/course.png" href="#" alt="" style="width: 60px;"> Courses <br>
-          <img src="img/edit.png" href="#" alt="" style="width: 60px;"> Edit <br>
-          <img src="img/setting.png" href="#" alt="" style="width: 60px;"> Setting <br>
-          <img src="img/logout.png" href="profile.php" alt="" style="width: 60px;"> Log Out <br>
+          <ul>
+            <li><a href="profile.php"> <img src="img/profile.jpg" style="width: 20px;"> Profile</a></li>
+            <li><a href="profile.php"> <img src="img/home.png" style="width: 20px;"> Home</a></li>
+            <li><a href="profile.php"> <img src="img/course.png" style="width: 20px;"> Courses</a></li>
+            <li><a href="profile.php"> <img src="img/edit.png" style="width: 20px;"> Edit</a></li>
+            <li><a href="profile.php"> <img src="img/setting.png" style="width: 20px;"> Setting</a></li>
+            <li><a href="profile.php"> <img src="img/logout.png" style="width: 20px;"> Log Out</a></li>
+          </ul>
         </div>
-
+        
         <!-- src to js code for profile dropdown menu -->
         <script src="js_code/profile_dropdown.js"> </script>
 
@@ -81,9 +83,7 @@
       </h3>
     </div>
   </section>
-
 </body>
-
 </html>
 
 
@@ -119,13 +119,9 @@
 
   .dropdown-content a {
     color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-
-  .dropdown a:hover {
-    background-color: #ddd;
+    padding: 20px 16px;
+    text-decoration: double;
+    display: table;
   }
 
   .show {
