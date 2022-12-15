@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,8 +12,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  
+
   <!-- for background picture -->
   <style>
     body {
@@ -38,19 +40,37 @@
         <input type="text" placeholder="search for courses/topics...">
         <img src="img/magnifying-glass.png" alt="" style="width: 30px;">
       </div>
+
+      <!-- profile dropdown menu starts-->
       <div class="profile">
-        <button class="drpdwn-btn">
-          <img src="img/person_avatar_account_user_icon_191606.png" alt="" class="pro-icon" style="width: 50px;"> 
+        
+        <button onclick="myFunction()" class="drpdwn-btn">
+          <img src="img/person_avatar_account_user_icon_191606.png" alt="" class="pro-icon" style="width: 50px;">
           <img src="img/down.png" alt="" class="dwn-icon">
         </button>
+
+        <div id="myDropdown" class="dropdown-content">
+          <a href="def.php">Profile</a>
+          <a href="abd.php">Home</a>
+
+          <a href="logout.php">Log Out</a>
+        </div>
+
+        <!-- src to js code for profile dropdown menu -->
+        <script src="js_code/profile_dropdown.js"> </script>
+
       </div>
+      <!-- profile dropdown menu ends-->
+
     </div>
   </header>
 
   <section class="section-p1 dashboard">
     <div class="greet">
       <h1>Hello there!</h1>
-      <h3><p>It's good to see you</p></h3>
+      <h3>
+        <p>It's good to see you</p>
+      </h3>
     </div>
   </section>
 
@@ -61,4 +81,51 @@
     <a href="" class="footer-btn">FAQ</a>
   </footer>
 </body>
+
 </html>
+
+<style>
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropbtn:hover,
+  .dropbtn:focus {
+    background-color: #2980B9;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown a:hover {
+    background-color: #ddd;
+  }
+
+  .show {
+    display: block;
+  }
+</style>
