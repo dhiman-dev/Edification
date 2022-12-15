@@ -60,14 +60,9 @@ p {
   margin: 40px 0;
 }
 
-.star{
-  font-size: 12px;
-  font-weight: 500;
-  color: #e2a644;
-}
-
 body {
-  width: 100%
+  width: 100%;
+  background-color: #FFFCFC;
 }
 
 /* header */
@@ -83,22 +78,22 @@ body {
   top: 0;
   left: 0;
   position: absolute;
-  width: 100%;
+  width: 1920px;
   height: 136px;
   border-radius: 7px;
 }
-#nav-bar{
+.nav-bar{
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#nav-bar li{
+.nav-bar li{
   list-style: none;
   margin: 0 20px;
   position: relative;
 }
 
-#nav-bar li a{
+.nav-bar li a{
   font-family: 'Quicksand';
   text-decoration: none;
   font-size: 40px;
@@ -278,4 +273,208 @@ input[type="text"], input[type="password"] {
 
 .reg p a:hover{
   color: #cf715e;
+}
+
+#topbar{
+  padding: 10px 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#topbar div{
+  padding-right: 10px;
+}
+
+#topbar .searchbar{
+  position: relative;
+}
+
+#topbar .searchbar input[type=text]{
+  width: 765px;
+  height: 80px;
+  color: #ECECEC;
+  font-family: 'Poppins';
+  font-size: 30px;
+  text-align: center;
+  align-items: center center;
+  background: #D8BEBE;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-bottom: 0;
+  
+}
+
+#topbar .searchbar img{
+  position: absolute;
+  left: 30px;
+  top: 25px
+}
+
+#topbar .drpdwn-btn{
+  padding: 0px 10px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #222;
+  border-radius: 12px;
+}
+
+#topbar .drpdwn-btn .dwn-icon{
+  align-self: center;
+}
+
+.tab-bar{
+  padding-bottom: 10px;
+}
+
+#main .course-details{
+  display: flex;
+  justify-content: space-between;
+  background-color: #E0E0E0;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.course-details .thum{
+  width: 1;
+}
+
+.course-details .thum img{
+  width: 100px;
+  padding-left: 20px;
+}
+
+.course-details .title{
+  min-width: 300px;
+  text-align: start;
+}
+
+.course-details h3{
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 51px;
+}
+
+.course-details .icon-set{
+  display: flex;
+}
+
+.course-details .icon-set img {
+  width: 50px;
+  height: 50px;
+  margin-top: 15px;
+}
+
+.course-details .icon-set p {
+  display: inline;
+  padding-left: 10px;
+  align-self: center;
+}
+
+.view-course{
+  height: 50px;
+  color: #FFFFFF;
+  background: #222;
+  border-radius: 8px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  padding: 0px 20px;
+  line-height: 0px;
+  align-self: center;
+  margin-right: 10px;
+}
+
+/* Dashboard css */
+
+#main-header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.dash-nav{
+  background: #D9D9D9;
+  border-radius: 20px;
+  align-self: center;
+  margin-left: 90px;
+  margin-top: 17px;
+}
+
+.dash-nav ul{
+  display: flex;
+  justify-content: center;
+  padding: 17px 10px;
+  
+}
+
+.dash-nav ul li{
+  list-style: none;
+  margin-right: 50px;
+}
+
+.dash-nav ul li a{
+  font-family: 'Quicksand';
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 50px;
+  color: #222;
+  padding: 10px;
+}
+
+.dash-nav ul li a:hover{
+  color: #f2a6a6;
+}
+
+.dashboard{
+  height: 70vh;
+  background: url(/img/dashboard_backgroud.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: ;
+}
+
+.greet{
+  text-align: center;
+  margin-top: 28vh;
+}
+
+.greet h3{
+  font-family: 'Bebas';
+  font-size: 50px;
+  padding-bottom: 10px;
+  font-weight: 700;
+}
+
+.greet p{
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.footer{
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-evenly;
+  background: #D6CBCB;
+  border-radius: 20px;
+  padding: 40px 0;
+}
+
+.footer p{
+  font-weight: 600;
+  font-size: 18px;
+  color: #000000;
+  align-self: center;
+}
+
+.footer .footer-btn{
+  text-decoration: none;
+  color: #222;
+  background-color: #D9D9D9;
+  padding: 10px 15px;
+  font-size: 20px;
+  font-weight: 600;
 }
