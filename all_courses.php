@@ -1,3 +1,7 @@
+<?php
+  include("footer.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -88,18 +92,6 @@
             }
          }
          ?>
-  
-
-  
-    
   </section>
-
-  <footer class="footer">
-    <p>© 2022 Edification</p>
-    <a href="" class="footer-btn">About Us</a>
-    <a href="" class="footer-btn">Contact Us</a>
-    <a href="" class="footer-btn">FAQ</a>
-    <a href="logout.php" class="footer-btn">Log out</a>
-  </footer>
 </body>
 </html>
