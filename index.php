@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/index0.css">
+    <link rel="stylesheet" href="css/style2.css">
 </head>
 <body>
   <header id="header">
@@ -30,7 +30,7 @@
       <h2>Hello There!</h2>
       <p>having problem understanding a topic? looking for a way to start new courses? don’t worry!! we’ll guide you to your desire contents. 
         Edification is a non-profit system where you can learn and contribute to any computer-science releted courses</p>
-      <button class="get-started-btn"><img src="img/play-fill.png"> <a href="login.php">Get Started</a></button>
+      <button class="get-started-btn"><img src="img/play-fill.png" alt=""> <a href="login.php"> Get Started </a></button>
     </div>
     <div class="right-col">
       <img src="img/img1.png" alt="">

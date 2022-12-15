@@ -5,14 +5,16 @@ include("connection.php");
 $req = "select * from users ";
 $re = mysqli_query($con, $req);
 $list = mysqli_fetch_all($re,MYSQLI_ASSOC);
-
 if(isset($_POST['req'])){
-	$request = $_POST['request'];
-
-  $query = "insert into course_req (req) values ('$request')";
-	mysqli_query($con, $query);
 	
-  die;
+    $request = $_POST['request'];
+		
+	$query = "insert into course_req (req) values ('$request')";
+
+			mysqli_query($con, $query);
+
+			
+			die;
 }
 ?>
 
@@ -28,9 +30,9 @@ if(isset($_POST['req'])){
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
-    
-    
-    <header id="main-header">
+</head>
+<body>
+<header id="main-header">
     <div class="dash-nav">
       <ul>
         <li> <a href="dashboard.php">Home</a></li>
@@ -54,19 +56,12 @@ if(isset($_POST['req'])){
   </header>
 
   <section class="section-p1">
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    
   <form class="form-style-4" action="" method="POST" >
 		<h2>Enter the course name you are wanting for</h2>
         <label for="field1">
-            <span>Enter name</span> <input type="text" name="request"/>
-            <span> <input type="submit" value="Post" name="req"/> </span> 
+            <span>Enter name</span><input type="text" name="request"  />
+            <span> </span><input type="submit" value="Post" name="req" />
         </label>
 	</form>
   </section>
@@ -77,6 +72,5 @@ if(isset($_POST['req'])){
     <a href="" class="footer-btn">Contact Us</a>
     <a href="" class="footer-btn">FAQ</a>
   </footer>
-
 </body>
 </html>

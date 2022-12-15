@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header id="main-header">
+  <header id="main-header">
     <div class="dash-nav">
       <ul>
         <li> <a href="dashboard.php">Home</a></li>
@@ -34,107 +34,72 @@
       </div>
     </div>
   </header>
-  
+
   <div class="tab-bar section-p1">
     <h3>All Courses</h3>
   </div>
   <section id="main" class="section-p1">
-    <div class="course-details">
-      <div class="thum">
-        <img src="img/monitor.png" alt="">
-      </div>
-      <div class="title">
-        <h3>Introduction to Computer System</h3>
-        <p>by Mr. Someone1</p>
-      </div>
-      <div class="icon-set">
-        <img src="img/clock.png" alt="">
-        <p>3h 30min</p>
-      </div>
-      <div class="icon-set">
-        <img src="img/people.png" alt="">
-        <p>49</p>
-      </div>
-      <button class="view-course">View Course</button>
-    </div>
 
-    <div class="course-details">
-      <div class="thum">
-        <img src="img/monitor.png" alt="">
-      </div>
-      <div class="title">
-        <h3>Structured Programming Language</h3>
-        <p>by Mr. Someone2</p>
-      </div>
-      <div class="icon-set">
-        <img src="img/clock.png" alt="">
-        <p>5h 30min</p>
-      </div>
-      <div class="icon-set">
-        <img src="img/people.png" alt="">
-        <p>52</p>
-      </div>
-      <button class="view-course">View Course</button>
-    </div>
+  <?php
+         require('connection.php');
+         $sql = "SELECT course_name,instructor FROM all_courses where status=1";
+         //execute the querry
+         $res = mysqli_query($con , $sql) or die(mysqli_error());
 
-    <div class="course-details">
-      <div class="thum">
-        <img src="img/monitor.png" alt="">
-      </div>
-      <div class="title">
-        <h3>Object Oriented Programming</h3>
-        <p>by Mr. Someone3</p>
-      </div>
-      <div class="icon-set">
-        <img src="img/clock.png" alt="">
-        <p>6h 30min</p>
-      </div>
-      <div class="icon-set">
-        <img src="img/people.png" alt="">
-        <p>95</p>
-      </div>
-      <button class="view-course">View Course</button>
-    </div>
+         // check whether the query is executed or not
+         if($res==TRUE)
+         {
+            //count rows whether we have data in the database
+            $count= mysqli_num_rows($res); //function to get all the rows in database
 
-    <div class="course-details">
-      <div class="thum">
-        <img src="img/monitor.png" alt="">
-      </div>
-      <div class="title">
-        <h3>Data Structure and Algorithm 1</h3>
-        <p>by Mr. Someone4</p>
-      </div>
-      <div class="icon-set">
-        <img src="img/clock.png" alt="">
-        <p>7h 30min</p>
-      </div>
-      <div class="icon-set">
-        <img src="img/people.png" alt="">
-        <p>185</p>
-      </div>
-      <button class="view-course">View Course</button>
-    </div>
+            //check the num of rows
+            if($count>0)
+            {
+                //we have data in database
+                while($rows=mysqli_fetch_assoc($res))
+                {
+                    $name=$rows['course_name'];
+                    $instructor=$rows['instructor'];
+                    ?>
+                      <div class="course-details">
+                        <div class="thum">
+                            <img src="img/monitor.png" alt="">
+                        </div>
+                        <div class="title">
+                            <h4><?php echo $name; ?></h4>
+                            <p>by <?php echo $instructor; ?></p>
+                        </div>
+                        <div class="icon-set">
+                            <img src="img/clock.png" alt="">
+                            <p>3h 30min</p>
+                        </div>
+                        <div class="icon-set">
+                            <img src="img/people.png" alt="">
+                            <p>12</p>
+                        </div>
+                        <button class="view-course">View Course</button>
+                      </div>
+                    <?php
+                }
+            }
+            else
+            {
+              //we do not have data in database
+            }
+         }
+         ?>
+  
 
-    <div class="course-details">
-      <div class="thum">
-        <img src="img/monitor.png" alt="">
-      </div>
-      <div class="title">
-        <h3>Data Structure and Algorithm 2</h3>
-        <p>by Mr. Someone5</p>
-      </div>
-      <div class="icon-set">
-        <img src="img/clock.png" alt="">
-        <p>8h 30min</p>
-      </div>
-      <div class="icon-set">
-        <img src="img/people.png" alt="">
-        <p>200</p>
-      </div>
-      <button class="view-course">View Course</button>
-    </div>
-
+  
     
   </section>
+
+  <footer class="footer">
+    <p>© 2022 Edification</p>
+    <a href="" class="footer-btn">About Us</a>
+    <a href="" class="footer-btn">Contact Us</a>
+    <a href="" class="footer-btn">FAQ</a>
+    <a href="logout.php" class="footer-btn">Log out</a>
+  </footer>
 </body>
 </html>

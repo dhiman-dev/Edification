@@ -33,7 +33,7 @@
               <div>
                 <label for="uname"><b>Username</b></label><br>
                 <!-- username -->
-                <input type="text" style="font-size: 22px;" placeholder="enter your username" name="username" required>
+                <input type="text" placeholder="" name="username" required>
               </div>
               
             </div>
@@ -44,7 +44,7 @@
               <div>
                 <label for="psw"><b>Password</b></label><br>
                 <!-- password -->
-                <input type="password" style="font-size: 22px;" placeholder="enter your password" name="password" required>
+                <input type="password" placeholder="" name="password" required>
               </div>
             </div>
             <div class="rem-pass">
@@ -81,7 +81,7 @@
         $password = mysqli_real_escape_string($con, $password);
         
         // Check user is exist in the database
-        $query = "SELECT * FROM `users` WHERE username = '$username'
+        $query = "SELECT * FROM users WHERE username = '$username'
                   AND password = '$password'";
         
         $result = mysqli_query($con, $query);

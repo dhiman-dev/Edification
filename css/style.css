@@ -34,8 +34,9 @@ h3 {
 }
 
 h4 {
-  font-family: Bebas Neue;
+  font-family:'Times New Roman';
   font-size: 20px;
+  line-height: 50px;
   color: #222;
 }
 
@@ -429,10 +430,10 @@ input[type="text"], input[type="password"] {
 
 .dashboard{
   height: 70vh;
-  background: url(img/dashboard_backgroud.png);
+  background: url(/img/dashboard_backgroud.png);
   background-repeat: no-repeat;
   background-position: center;
-  /* background-position-y: ; */
+  
 }
 
 .greet{
@@ -478,4 +479,3 @@ input[type="text"], input[type="password"] {
   font-size: 20px;
   font-weight: 600;
 }
-
