@@ -57,12 +57,12 @@ include("footer.php");
         <!-- dropdown menu goes here -->
         <div id="myDropdown" class="dropdown-content">
           <ul>
-            <li><a href="profile.php"> <img src="img/profile.jpg" style="width: 20px;"> Profile</a></li>
-            <li><a href="profile.php"> <img src="img/home.png" style="width: 20px;"> Home</a></li>
-            <li><a href="profile.php"> <img src="img/course.png" style="width: 20px;"> Courses</a></li>
-            <li><a href="profile.php"> <img src="img/edit.png" style="width: 20px;"> Edit</a></li>
-            <li><a href="profile.php"> <img src="img/setting.png" style="width: 20px;"> Setting</a></li>
-            <li><a href="profile.php"> <img src="img/logout.png" style="width: 20px;"> Log Out</a></li>
+            <li><a href="profile.php"> <img src="img/profile.jpg" style="width: 35px;"> Profile</a></li>
+            <li><a href="home.php"> <img src="img/home.png" style="width: 35px;"> Home</a></li>
+            <li><a href="courses.php"> <img src="img/course.png" style="width: 35px;"> Courses</a></li>
+            <li><a href="edit.php"> <img src="img/edit.png" style="width: 35px;"> Edit</a></li>
+            <li><a href="setting.php"> <img src="img/setting.png" style="width: 35px;"> Setting</a></li>
+            <li><a href="logout.php"> <img src="img/logout.png" style="width: 35px;"> Log Out</a></li>
           </ul>
         </div>
 
@@ -84,10 +84,9 @@ include("footer.php");
     </div>
   </section>
 </body>
-
 </html>
 
-
+<!-- css for profile dropdown menu -->
 <style>
   .dropbtn {
     background-color: #3498DB;
@@ -111,11 +110,15 @@ include("footer.php");
   .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #D8BEBE;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 10px; 
+    right: 10px;
+    width: 200px;
+    height: 470px;
   }
 
   .dropdown-content a {
