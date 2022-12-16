@@ -37,7 +37,7 @@ if (isset($_POST['req'])) {
   <header id="main-header">
     <div class="dash-nav">
       <ul>
-        <li> <a href="dashboard.php">Home</a></li>  <a href=""></a>
+        <li> <a href="dashboard.php">Home</a></li> <a href=""></a>
         <li> <a href="#">Your Courses</a></li>
         <li> <a href="all_courses.php">All Courses</a></li>
         <li> <a href="#">Contribute</a></li>
@@ -64,7 +64,7 @@ if (isset($_POST['req'])) {
         <h2>Enter the course name you are looking for</h2>
       </span> <br>
       <label for="field1">
-        <input id="crs" type="text" placeholder="enter course name" name="request" />
+        <input id="coursename" type="text" placeholder="enter course name" name="request" />
       </label>
 
       <br><br>
@@ -73,13 +73,16 @@ if (isset($_POST['req'])) {
         <span>
           <h2>Why do you want this course?</h2>
         </span><br>
-        <textarea name="comment" rows="10" cols="53" placeholder="enter some reasons"></textarea>
+        <textarea name="comment" rows="8" cols="50" placeholder="enter some reasons"></textarea>
       </label>
 
-      <br> <br><br><br>
+      <br> <br>
       &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
       <button> <a href="#" class="btn-primary">Submit</a></button>
-      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+      &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
       <button> <a href="#" class="btn-primary">Cancel</a></button>
 
     </form>
@@ -97,23 +100,42 @@ if (isset($_POST['req'])) {
 
 
 <style>
-  #crs {
-    font-size: 25px;
+  #coursename {
+    font-size: 30px;
     border-radius: 10px;
+    height: 50px;
+    background-color: #e4d6ca;
   }
 
   textarea {
-    font-size: 25px;
+    font-size: 30px;
     border-radius: 10px;
     background-color: #e4d6ca;
   }
 
   .btn-primary {
-    padding: 20px;
+    background-color: #e4d6ca;
     text-decoration: solid;
-    color: black;
+    color: red;
     font-weight: bold;
     font-size: 30px;
-    border-radius: 2px;
+    padding: 12px 25px;
+    text-align: center;
+    border-radius: 25px;
+    position: absolute;
+  }
+
+  /* opacity of bg image */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 500px;
+    right: 10px;
+    bottom: 0;
+    background-image: url('img/dashboard_backgroud.png');
+    opacity: 0.25;
+    z-index: -1;
+    background-repeat: no-repeat;
   }
 </style>
