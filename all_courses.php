@@ -20,7 +20,7 @@
     <div class="dash-nav">
       <ul>
         <li> <a href="dashboard.php">Home</a></li>
-        <li> <a href="#">Your Courses</a></li>
+        <li> <a href="course_req.php">Course Request</a></li>
         <li> <a href="all_courses.php">All Courses</a></li>
         <li> <a href="#">Contribute</a></li>
       </ul>
@@ -48,7 +48,7 @@
          require('connection.php');
          $sql = "SELECT course_name,instructor FROM all_courses where status=1";
          //execute the querry
-         $res = mysqli_query($con , $sql) or die(mysqli_error());
+         $res = mysqli_query($con , $sql);
 
          // check whether the query is executed or not
          if($res==TRUE)
