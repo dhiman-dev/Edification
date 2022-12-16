@@ -1,6 +1,6 @@
 <?php
 include("header.php");
-include("footer.php");
+// include("footer.php");
 ?>
 
 <!DOCTYPE html>
@@ -44,18 +44,13 @@ include("footer.php");
         </div>
     </section>
 
-    <style>
-        .button {
-            position: relative;
-            bottom: 10px;
-            left: 1810px;
-            right: 20px;
-            padding: 30;
-        }
-    </style>
-
-    <button class="button"> <a href="dashboard.php"> Back </a></button>
-
+    <button 
+        name="back" type="button" 
+        style="background-color: white; color: white; 
+        height: 45px; width: 100px; border-radius: 10px; 
+        font-size: 20px; border-color: blue; 
+        margin-left: 100px;margin-top: 50px;" 
+        value="submit"> <a href="dashboard.php">Back</a> </button>
 </body>
 
 </html>
