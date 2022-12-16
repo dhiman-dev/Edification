@@ -44,13 +44,21 @@ include("header.php");
         </div>
     </section>
 
-    <button 
-        name="back" type="button" 
-        style="background-color: white; color: white; 
-        height: 45px; width: 100px; border-radius: 10px; 
-        font-size: 20px; border-color: blue; 
-        margin-left: 100px;margin-top: 50px;" 
-        value="submit"> <a href="dashboard.php">Back</a> </button>
-</body>
+    <button class="button"> <a href="dashboard.php">Back</a></button>
+    <style>
+        .button {
+            height: 80px;
+            width: 130px;
+            background-color: whitesmoke;
+            position: absolute;
+            right: 20px;
+            border-radius: 10px;
+            font-size: 35px;
+            border-color: red;
+            margin-right: 80px;
+            margin-bottom: 80px;
+        }
+    </style>
 
+</body>
 </html>
