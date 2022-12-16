@@ -25,9 +25,9 @@
             <!-- dropdown menu goes here -->
             <div id="myDropdown" class="dropdown-content">
                 <ul>
-                    <li><a href="profile.php"> <img src="img/profile.jpg" style="width: 35px;"> Profile</a></li>
-                    <li><a href="home.php"> <img src="img/home.png" style="width: 35px;"> Home</a></li>
-                    <li><a href="courses.php"> <img src="img/course.png" style="width: 35px;"> Courses</a></li>
+                    <li><a href="profile.php"> <img src="img/profile_pic.jpg" style="width: 35px;"> Profile</a></li>
+                    <li><a href="home.php"> <img src="img/home_pic.png" style="width: 35px;"> Home</a></li>
+                    <li><a href="courses.php"> <img src="img/courses.png" style="width: 35px;"> Courses</a></li>
                     <li><a href="edit.php"> <img src="img/edit.png" style="width: 35px;"> Edit</a></li>
                     <li><a href="setting.php"> <img src="img/setting.png" style="width: 35px;"> Setting</a></li>
                     <li><a href="logout.php"> <img src="img/logout.png" style="width: 35px;"> Log Out</a></li>
@@ -42,3 +42,51 @@
 
     </div>
 </header>
+
+
+<!-- css for profile dropdown menu -->
+<style>
+  .dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropbtn:hover,
+  .dropbtn:focus {
+    background-color: #2980B9;
+  }
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #D8BEBE;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 10px; 
+    right: 10px;
+    width: 150px;
+    height: 470px;
+  }
+
+  .dropdown-content a {
+    color: black;
+    padding: 20px 16px;
+    text-decoration: double;
+    display: table;
+  }
+
+  .show {
+    display: block;
+  }
+</style>
