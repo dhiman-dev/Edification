@@ -1,7 +1,7 @@
 <?php
-  include("connection.php");
-  session_start();
-  $username = $_SESSION['username'];
+include("connection.php");
+session_start();
+$username = $_SESSION['username'];
 ?>
 
 <header id="main-header">
@@ -32,8 +32,8 @@
       <div id="myDropdown" class="dropdown-content">
         <ul>
           <!-- logged in as ... -->
-          <h3>&nbsp;&nbsp;&nbsp;<?php echo "$username";?></h3>  
-          
+          <h3>&nbsp;&nbsp;&nbsp;<?php echo "$username"; ?></h3>
+
           <li><a href="profile.php"> &nbsp;&nbsp;&nbsp;&nbsp; <img src="img/profile_pic.jpg" style="width: 35px;"> &nbsp;&nbsp;&nbsp;&nbsp; Profile</a></li>
           <li><a href="home.php"> &nbsp;&nbsp;&nbsp;&nbsp; <img src="img/home_pic.png" style="width: 35px;"> &nbsp;&nbsp;&nbsp;&nbsp; Home</a></li>
           <li><a href="courses.php"> &nbsp;&nbsp;&nbsp;&nbsp; <img src="img/courses.png" style="width: 35px;"> &nbsp;&nbsp;&nbsp;&nbsp; Courses</a></li>
@@ -98,5 +98,4 @@
   .show {
     display: block;
   }
-
 </style>
