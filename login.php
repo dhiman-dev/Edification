@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Edification</title>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
-      <link rel="stylesheet" href="css/style.css">
-  </head>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Edification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
 <body>
   <section class="content">
     <div class="img-container">
@@ -24,7 +26,7 @@
       <div class="login-form">
         <!-- login action page -->
         <form action="" method="post">
-          
+
           <div class="container">
             <div class="place-holder">
               <div class="logo">
@@ -35,7 +37,7 @@
                 <!-- username -->
                 <input type="text" placeholder="" name="username" required>
               </div>
-              
+
             </div>
             <div class="place-holder">
               <div class="logo">
@@ -53,7 +55,7 @@
               </label>
               <span class="psw"><a href="forget.php">Forgot password?</a></span>
             </div>
-            
+
             <button type="submit">Login</button>
           </div>
         </form>
@@ -65,8 +67,8 @@
     </div>
   </section>
 </body>
-</html>
 
+</html>
 
 <?php
     require('connection.php');
@@ -81,7 +83,7 @@
         $password = mysqli_real_escape_string($con, $password);
         
         // Check user is exist in the database
-        $query = "SELECT * FROM users WHERE username = '$username'
+        $query = "SELECT * FROM `users` WHERE username = '$username'
                   AND password = '$password'";
         
         $result = mysqli_query($con, $query);
@@ -91,8 +93,9 @@
             $_SESSION['username'] = $username;
             // Redirect to user dashboard page
             header("Location: dashboard.php");
-        } else {
-          echo "<script>alert('wrong password or username.')</script>";
+        } 
+        else {
+            echo "<script>alert('wrong password or username.')</script>";
         }
     } 
        
