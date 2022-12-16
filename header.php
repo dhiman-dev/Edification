@@ -1,7 +1,7 @@
 <?php
-include("connection.php");
-session_start();
-$username = $_SESSION['username'];
+  include("connection.php");
+  session_start();
+  $username = $_SESSION['username'];
 ?>
 
 <header id="main-header">
@@ -19,10 +19,9 @@ $username = $_SESSION['username'];
       <img src="img/magnifying-glass.png" alt="" style="width: 30px;">
     </div>
 
-
     <!-- profile dropdown menu starts-->
     <div class="profile">
-
+      
       <button onclick="myFunction()" class="drpdwn-btn">
         <img src="img/person_avatar_account_user_icon_191606.png" alt="" class="pro-icon" style="width: 50px;">
         <img src="img/down.png" alt="" class="dwn-icon">
