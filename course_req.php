@@ -37,7 +37,7 @@ if (isset($_POST['req'])) {
   <header id="main-header">
     <div class="dash-nav">
       <ul>
-        <li> <a href="dashboard.php">Home</a></li>
+        <li> <a href="dashboard.php">Home</a></li>  <a href=""></a>
         <li> <a href="#">Your Courses</a></li>
         <li> <a href="all_courses.php">All Courses</a></li>
         <li> <a href="#">Contribute</a></li>
