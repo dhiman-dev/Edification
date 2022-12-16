@@ -1,6 +1,4 @@
-<?php
-  include("footer.php");
-?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -48,7 +46,7 @@
          require('connection.php');
          $sql = "SELECT course_name,instructor FROM all_courses where status=1";
          //execute the querry
-         $res = mysqli_query($con , $sql);
+         $res = mysqli_query($con , $sql) or die(mysqli_error());
 
          // check whether the query is executed or not
          if($res==TRUE)
@@ -93,5 +91,9 @@
          }
          ?>
   </section>
+
 </body>
+
 </html>
+
+
