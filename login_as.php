@@ -9,10 +9,12 @@
 </head>
 
 <body>
-
     <div class="wlcm">
+        <h1>Welcome to <br> Edification!</h1>
+    </div>
+
+    <div class="login_as">
         <h1>login as</h1>
-        <!-- <h2>Login As:</h2> -->
     </div>
 
     <div class="login-wrapper">
@@ -95,7 +97,7 @@
         background-repeat: no-repeat;
     }
 
-    .wlcm{
+    .login_as {
         position: absolute;
         top: 80px;
         left: 1250px;
@@ -103,6 +105,16 @@
         font-size: 40px;
         color: #b6c08b;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    }
+
+    .wlcm{
+        position: absolute;
+        top: 190px;
+        left: 250px;
+        transform: translateX(15px) translateY(60px);
+        font-size: 60px;
+        color: black;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     }
 
 </style>
