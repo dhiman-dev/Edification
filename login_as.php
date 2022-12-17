@@ -9,6 +9,12 @@
 </head>
 
 <body>
+
+    <div class="wlcm">
+        <h1>Login As</h1>
+        <!-- <h2>Login As:</h2> -->
+    </div>
+
     <div class="login-wrapper">
         <div class="login-container">
             <div class="login-row">
@@ -38,6 +44,8 @@
         margin: 0 auto;
         transform: translateX(400px) translateY(290px);
         border-radius: 7%;
+        background-color: #b6c08b;
+        opacity: 0.6;
     }
 
     .login-container {
@@ -86,4 +94,12 @@
         z-index: -1;
         background-repeat: no-repeat;
     }
+
+    .wlcm{
+        position: absolute;
+        top: 140px;
+        left: 1330px;
+        transform: translateX(15px) translateY(60px);
+    }
+
 </style>
