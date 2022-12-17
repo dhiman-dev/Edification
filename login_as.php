@@ -11,7 +11,7 @@
 <body>
 
     <div class="wlcm">
-        <h1>Login As</h1>
+        <h1>login as</h1>
         <!-- <h2>Login As:</h2> -->
     </div>
 
@@ -19,7 +19,7 @@
         <div class="login-container">
             <div class="login-row">
                 <button id="admin-btn"> <a href="admin_login.php">Admin</button>
-                <img src="img/admin.png" alt="Admin"> <a href="admin_login.php">
+                <img src="img/admin2.png" alt="Admin"> <a href="admin_login.php">
             </div>
             <div class="login-row">
                 <button id="instructor-btn"><a href="ins_login.php">Instructor</button>
@@ -27,7 +27,7 @@
             </div>
             <div class="login-row">
                 <button id="user-btn"> <a href="login.php">User</button>
-                <img src="img/usr.png" alt="User"><a href="login.php">
+                <img src="img/user2.jpg" alt="User"><a href="login.php">
             </div>
         </div>
     </div>
@@ -54,7 +54,7 @@
         align-items: center;
         width: 500px;
         margin: 0 auto;
-        transform: translateX(15px) translateY(60px);
+        transform: translateX(0px) translateY(60px);
     }
 
     .login-row {
@@ -97,9 +97,12 @@
 
     .wlcm{
         position: absolute;
-        top: 140px;
-        left: 1330px;
+        top: 80px;
+        left: 1250px;
         transform: translateX(15px) translateY(60px);
+        font-size: 40px;
+        color: #b6c08b;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
 
 </style>

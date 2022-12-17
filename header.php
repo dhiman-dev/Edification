@@ -5,8 +5,9 @@
 ?>
 
 <header id="main-header">
-  <div class="dash-nav">
-    <ul>
+  <!-- <h3>&nbsp;&nbsp;&nbsp;<?php echo "$username"; ?></h3> -->
+  <div class="dash-nav">  
+  <ul>
       <li> <a href="dashboard.php">Home</a></li>
       <li> <a href="#">Your Courses</a></li>
       <li> <a href="all_courses.php">All Courses</a></li>
