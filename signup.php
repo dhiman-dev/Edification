@@ -129,10 +129,10 @@
         $result = mysqli_query($con, $query);
         
         if ($result) {
-          // echo "<script>alert('You are registered successfully.')</script>";
+          echo "<script>alert('You are registered successfully.')</script>";
             echo "<div class='form'>
                   <h3>You are registered successfully.</h3><br/>
-                  <p class='link'>Click here <a href='login.php'>Login</a></p>
+                  <p class='link'>Click here <a href='login_as.php'>Login</a></p>
                   </div>";
         } 
         else {

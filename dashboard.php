@@ -19,13 +19,17 @@
 <body>
   <!-- for background picture -->
   <style>
-    body {
-      background-image: url('img/dashboard_backgroud.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      opacity: 10;
-    }
+    body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 150px;
+    right: 10px;
+    bottom: 0;
+    background-image: url('img/dashboard_backgroud.png');
+    opacity: 0.35;
+    background-repeat: no-repeat;
+  }
   </style>
 
   <!-- header file alone with dropdown profile is in header file -->

@@ -46,7 +46,7 @@
          require('connection.php');
          $sql = "SELECT course_name,instructor FROM all_courses where status=1";
          //execute the querry
-         $res = mysqli_query($con , $sql) or die(mysqli_error());
+         $res = mysqli_query($con , $sql);
 
          // check whether the query is executed or not
          if($res==TRUE)
