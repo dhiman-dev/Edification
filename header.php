@@ -1,7 +1,7 @@
- <?php
+<?php
       include("connection.php");
       session_start();
-      $username = $_SESSION['username'];
+      // $username = $_SESSION['username'];
  ?>
  
  <header id="main-header">
@@ -16,9 +16,15 @@
         </ul>
     </div>
     <div id="topbar" class="section-p1">
+
+        <!-- search menu  -->
+
         <div class="searchbar">
-            <input type="text" placeholder="search for courses/topics...">
+          <form action="search_course.php" method="get">
             <img src="img/magnifying-glass.png" alt="" style="width: 30px;">
+            <input type="text" id="query" name="query" placeholder="search for courses/topics...">
+            <!-- <input type="submit" value="Submit"> -->
+          </form>
         </div>
 
 
@@ -33,7 +39,7 @@
             <!-- dropdown menu goes here -->
             <div id="myDropdown" class="dropdown-content">
                 <ul>
-                    <h4><?php echo $username ; ?></h4>
+                    <!-- <h4><?php echo $username ; ?></h4> -->
 
                     <li><a href="profile.php"> <img src="img/profile_pic.jpg" style="width: 35px;"> Profile</a></li>
                     <li><a href="dashboard.php"> <img src="img/home_pic.png" style="width: 35px;"> Home</a></li>
@@ -52,6 +58,7 @@
 
     </div>
 </header>
+
 
 
 <!-- css for profile dropdown menu -->
