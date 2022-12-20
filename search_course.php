@@ -84,22 +84,42 @@
                             font-weight: 500;line-height: 25px;
                             color: #FFFFFF;background: #222;padding: 10px;" href="course_overview.php" class="view-course">View Course</a>
                     </div>
-        <?php
+                <?php
                 }
             } else {
                 ?>
-                //we do not have data in database
-                <div class="crs_nai">
-                    
+                <div>
+                    <img src="img/not_found404.png" width="90%" height="650px" alt="">
                 </div>
 
-
-            <?php
+                <div class="go_back">
+                    <a href="dashboard.php">Go Back</a>
+                </div>
+        <?php
             }
         }
         ?>
     </section>
-
 </body>
 
 </html>
+
+
+<!-- style for button -->
+<style>
+    .go_back{
+        position: absolute;
+        right: 230px;
+        bottom: 30px;
+        background: gray;
+        padding: 25px 40px;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 25px;
+    }
+
+    .go_back:hover {
+        background-color: red;
+        /* cursor: pointer; */
+    }
+</style>
