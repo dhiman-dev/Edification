@@ -46,7 +46,7 @@
          require('connection.php');
          $sql = "SELECT course_name,instructor FROM all_courses where status=1";
          //execute the querry
-         $res = mysqli_query($con , $sql);
+         $res = mysqli_query($con , $sql) or die(mysqli_error());
 
          // check whether the query is executed or not
          if($res==TRUE)
@@ -79,7 +79,25 @@
                             <img src="img/people.png" alt="">
                             <p>12</p>
                         </div>
-                        <button class="view-course">View Course</button>
+                        <a style="text-decoration:none;
+                                  font-family: 'Roboto';
+                                  font-size: 26px;
+                                  font-weight: 500;
+                                  line-height: 25px;
+                                  color: #FFFFFF;
+                                  background: #222;
+                                  padding: 10px; " href="course_overview.php" class="view-course">View Course</a>
+
+                        <!-- <a style="text-decoration:none;
+                                  font-family: 'Roboto';
+                                  font-size: 26px;
+                                  font-weight: 500;
+                                  line-height: 25px;
+                                  color: #FFFFFF;
+                                  background: #222;
+                                  padding: 10px; " href="#" class="view-course">Enroll</a> -->
+
+
                       </div>
                     <?php
                 }

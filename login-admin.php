@@ -1,18 +1,34 @@
 <?php include('config/constants.php'); ?>
 
-<html>
-    <head>
-        <title>Login - Edification</title>
-        <link rel="stylesheet" href="css/admin.css">
-    </head>
+<!DOCTYPE html>
+<html lang="en">
 
-    <body>
-        
-        <div class="login">
-            <h1 class="text-center">Login Admin</h1>
-            <br><br>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - Edification</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:wght@300&family=Oswald:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;500;700&family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
 
-            <?php 
+<body>
+  <section class="content">
+    &nbsp;&nbsp;&nbsp;&nbsp;
+    <div class="img-container">
+    <br><br>
+      <img src="img/instructor_login.png" alt="">
+    </div>
+    <div class="login-container">
+      <div class="title">
+        <h2>Welcome to<br><span style="color: #6358DC; font-family: 'Poppins'; font-weight: 700; font-size: 48px;">Edification!</span></h2>
+      </div>
+
+      <?php 
                 if(isset($_SESSION['login']))
                 {
                     echo $_SESSION['login'];
@@ -25,31 +41,52 @@
                     echo $_SESSION['no-login-message'];
                     unset($_SESSION['no-login-message']);
                 }
-            ?>
-            <br><br>
+        ?>
 
-            <!-- Login Form Starts HEre -->
-            <form action="" method="POST" class="text-center">
-                <table class="table-30">
-                    <tr>
-                        <td>Username:</td>
-                        <td><input type="text" name="username" placeholder="Enter Username"><br></td>
-                    </tr>
+        <br><br>
 
-                    <tr>
-                        <td>Password:</td>
-                        <td><br><br><input type="password" name="password" placeholder="Enter Password"><br><br><br></td>
-                    </tr>
 
-                </table>
-                    <input type="submit" name="submit" value="Login" class="btn-primary"><br><br>
-            </form>
-            <!-- Login Form Ends HEre -->
+      <div class="login-form">
+        <!-- login action page -->
+        <form action="" method="post">
 
-            <p class="text-center">Created By - <a href="#">The Differentiate Trio</a></p>
-        </div>
+          <div class="container">
+            <div class="place-holder">
+              <div class="logo">
+                <img src="img/person_avatar_account_user_icon_191606.png" alt="">
+              </div>
+              <div>
+                <label for="uname"><b>Username</b></label><br>
+                <!-- username -->
+                <input type="text" placeholder="" name="username" required>
+              </div>
 
-    </body>
+            </div>
+            <div class="place-holder">
+              <div class="logo">
+                <img src="img/key_security_icon_195229.png" alt="" class="key">
+              </div>
+              <div>
+                <label for="psw"><b>Password</b></label><br>
+                <!-- password -->
+                <input type="password" placeholder="" name="password" required>
+              </div>
+            </div>
+            <div class="rem-pass">
+              <label>
+                <input type="checkbox" checked="checked" name="remember"> Remember me
+              </label>
+            </div>
+
+            <button type="submit" name="submit">Login</button>
+            <!-- <input type="submit" name="submit" value="Login" class="btn-primary"><br><br> -->
+          </div>
+        </form>
+        <br><br><br>
+        <h4 class="text-center">Created By - <a href="#">The Differentiate Trio</a></h4>
+  </section>
+</body>
+
 </html>
 
 <?php 
@@ -87,7 +124,7 @@
         else
         {
             //User not Available and Login FAil
-            $_SESSION['login'] = "<div class='error text-center'>Username or Password did not match or you are not in pannel now!!.</div>";
+            $_SESSION['login'] = "<div style='color: #ff4757;  text-align: center;' class='error text-center'>Username or Password did not match or you are not in pannel now!!.</div>";
             //REdirect to HOme Page/Dashboard
             header('location:'.SITEURL.'login-admin.php');
         }

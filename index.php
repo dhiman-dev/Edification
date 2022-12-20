@@ -17,9 +17,9 @@
       <ul id="nav-bar">
         <li> <a href="login_as.php">Courses</a></li>
         <li> <a href="login_as.php">Contribute</a></li>
-        <li> <a href="#">FAQ</a></li>
+        <li> <a href="login_as.php">FAQ</a></li>
         <li> <a href="#">Contact Us</a></li>
-        <li> <a href="about_us.php">About Us</a></li>
+        <li> <a href="#">About Us</a></li>
         <li> <button class="login-btn"> <a href="login_as.php">Log In</a></button></li>
       </ul>
     </div>
@@ -30,7 +30,7 @@
       <h2>Hello There!</h2>
       <p>having problem understanding a topic? looking for a way to start new courses? don’t worry!! we’ll guide you to your desire contents. 
         Edification is a non-profit system where you can learn and contribute to any computer-science releted courses</p>
-      <button class="get-started-btn"> <img src="img/play-fill.png" alt=""> <a href="login_as.php"> Get Started </a></button>
+      <button class="get-started-btn"><img src="img/play-fill.png" alt=""> <a href="login.php"> Get Started </a></button>
     </div>
     <div class="right-col">
       <img src="img/img1.png" alt="">

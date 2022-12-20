@@ -1,11 +1,10 @@
 <?php
-include("header.php");
-include("footer.php");
+  include("header.php");
+  include("footer.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,18 +16,17 @@ include("footer.php");
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
   <!-- for background picture -->
   <style>
     body {
       background-image: url('img/dashboard_backgroud.png');
       background-repeat: no-repeat;
-      background-position: center;
+      background-attachment: fixed;
       background-size: cover;
+      opacity: 10;
     }
   </style>
-
 
   <!-- header file alone with dropdown profile is in header file -->
 
@@ -41,5 +39,4 @@ include("footer.php");
     </div>
   </section>
 </body>
-
 </html>

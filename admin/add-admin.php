@@ -17,24 +17,32 @@
 
                 <table class="table-30">
                     <tr>
-                        <td>Full Name:</td>
+                        <td>First Name:</td>
                         <td>
-                            <input type="text" name="full_name" placeholder="Enter your name">
+                            <input type="text" name="first_name" placeholder="Enter first name">
                         </td> 
                     </tr>
+
+                    <tr>
+                        <td>Last Name:</td>
+                        <td>
+                            <input type="text" name="last_name" placeholder="Enter last name">
+                        </td> 
+                    </tr>
+
 
 
                     <tr>
                         <td>Username:</td> 
                         <td> 
-                            <input type="text" name="username" placeholder="Your username">
+                            <input type="text" name="username" placeholder="Enter username">
                         </td>
                     </tr>
 
                     <tr>
                         <td>E-mail:</td> 
                         <td> 
-                            <input type="text" name="email" placeholder="Enter your email">
+                            <input type="text" name="email" placeholder="Enter email">
                         </td>
                     </tr>
 
@@ -72,7 +80,8 @@ error_reporting(0);
     //echo "Button Clicked";
 
     //1.get the data from form
-    $full_name = $_POST['full_name'];
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
     $username = $_POST['username'];
     $email = $_POST['email'];
     $password = md5($_POST['password']); //password encryption with md5
@@ -80,12 +89,12 @@ error_reporting(0);
     //2.sql query to save the data into database
     $sql = "INSERT INTO admin SET
 
-    ad_name = '$full_name',
+    First_name = '$first_name',
+    last_name = '$last_name',
     username = '$username',
     email ='$email',
     password ='$password',
-    current_status ='1'
-    ";
+    status ='1' ";
 
     //3.execute query and save data in database
     $res = mysqli_query($conn, $sql) or die(mysqli_error());
@@ -93,6 +102,7 @@ error_reporting(0);
     //4. check the (query is execute) data is inserted or not and display appropiate meesage
     if($res==TRUE)
     {
+        echo "hello";
         //create a session variable to display the message
         $_SESSION['add'] = "Admin added successfully!";
         //Redirect page to manage admin
@@ -100,6 +110,7 @@ error_reporting(0);
     }
     else
     {
+        echo "hello9";
         //create a session variable to display the message
         $_SESSION['add'] = "Oops! Failed your request.";
         //Redirect page to add admin

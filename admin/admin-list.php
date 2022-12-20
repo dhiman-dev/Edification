@@ -12,10 +12,10 @@
                <table class="table">
                   <tr>
                         <th>S.N.</th>
-                        <th>Full Name</th>
+                        <th>ID</th>
+                        <th>Name</th>
                         <th>Username</th>
                         <th>E-mail</th>
-                        <th>Contact No.</th>
                         <th>Status</th>
                   </tr>
 
@@ -40,28 +40,33 @@
                                     while($rows=mysqli_fetch_assoc($res))
                                     {
                                           $id=$rows['id'];
-                                          $full_name=$rows['ad_name'];
+                                          $first_name=$rows['First_name'];
+                                          $last_name=$rows['last_name'];
                                           $email=$rows['email'];
                                           $username=$rows['username'];
-                                          $contact=$rows['contact_no'];
-                                          $status=$rows['current_status'];
+                                          $status=$rows['status'];
 
                                     ?>
                                     <tr>
                                           <td><?php echo $serial_number++ ; ?></td>
-                                          <td><?php echo $full_name ; ?></td>
+                                          <td><?php echo $id ; ?></td>
+                                          <td><?php echo $first_name." ".$last_name ; ?></td>
                                           <td><?php echo $username ; ?></td>
                                           <td><?php echo $email ; ?></td>
-                                          <td><?php echo $contact ; ?></td>
                                           <td><?php 
                                           if($status==0)
                                           {
                                             echo "Not in pannel";
                                           }
+                                          else if($status==2)
+                                          {
+                                            echo "Administrative Head" ;
+                                          }
                                           else
                                           {
-                                            echo "Pannel member" ;
+                                                echo "Pannel member" ;
                                           }
+                                    
                                            ?></td>
                                     </tr>
 

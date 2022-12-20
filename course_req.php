@@ -1,23 +1,7 @@
-<?php
-session_start();
+<?php  
+   include('config/constants.php');
 
-include("connection.php");
-$req = "select * from users ";
-$re = mysqli_query($con, $req);
-$list = mysqli_fetch_all($re, MYSQLI_ASSOC);
-if (isset($_POST['req'])) {
-
-  $request = $_POST['request'];
-
-  $query = "insert into course_req (req) values ('$request')";
-
-  mysqli_query($con, $query);
-
-
-  die;
-}
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -64,7 +48,7 @@ if (isset($_POST['req'])) {
         <h2>Enter the course name you are looking for</h2>
       </span> <br>
       <label for="field1">
-        <input id="coursename" type="text" placeholder="enter course name" name="request" />
+        <input id="coursename" type="text" placeholder="enter course name" name="request" required="" />
       </label>
 
       <br><br>
@@ -73,27 +57,39 @@ if (isset($_POST['req'])) {
         <span>
           <h2>Why do you want this course?</h2>
         </span><br>
-        <textarea name="comment" rows="8" cols="50" placeholder="enter some reasons"></textarea>
+        <textarea name="comment" rows="8" cols="50" placeholder="enter some reasons" required=""></textarea>
       </label>
+
+       <br/> <br/>
+              <?php 
+                  if(isset($_SESSION['add']))
+                  {
+                        echo ($_SESSION['add']); //displaying session message
+                        unset($_SESSION['add']); //removing session message
+                  }
+              ?>
 
       <br> <br>
       &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
-      <button> <a href="#" class="btn-primary">Submit</a></button>
+      <input type="submit" name="submit" value="submit" class="btn-primary">
+      <!-- <input type="submit" name="submit" value="Post" class="btn-secondary"> -->
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
       &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
-      <button> <a href="#" class="btn-primary">Cancel</a></button>
+      <!-- <button> <a href="#" class="btn-primary">Cancel</a></button> -->
+      <input type="submit" name="submit" value="cancel" class="btn-primary">
+      
 
     </form>
   </section>
 
-  <footer class="footer">
+  <!-- <footer class="footer">
     <p>© 2022 Edification</p>
     <a href="" class="footer-btn">About Us</a>
     <a href="" class="footer-btn">Contact Us  <br> sadhvk <br></a>
     <a href="" class="footer-btn">FAQ</a>
-  </footer>
+  </footer> -->
 </body>
 
 </html>
@@ -139,3 +135,51 @@ if (isset($_POST['req'])) {
     background-repeat: no-repeat;
   }
 </style>
+
+<?php 
+error_reporting(0);
+  //process the value from form and save it to database
+
+  //check whether the submit button is clicked or not
+
+  if(isset($_POST['submit']))
+  {
+    //button clicked
+    //echo "Button Clicked";
+
+    //1.get the data from form
+    //$image=$_POST['pic'];
+    $name = $_POST['request'];
+    $description=trim($_POST['comment']);
+    //$username = $_POST['username'];
+  
+
+
+    //2.sql query to save the data into database
+    $sql1 = "INSERT INTO request_course SET
+
+    course_name = '$name',
+    description='$description',
+    current_status =0 ";
+
+    //3.execute query and save data in database
+    $res = mysqli_query($conn, $sql1);
+
+    //4. check the (query is execute) data is inserted or not and display appropiate meesage
+    if($res==TRUE)
+    {
+        //create a session variable to display the message
+        $_SESSION['add'] = "<h4>Your request has been submitted to admin.You will get notify soon.</h4>";
+        //Redirect page to create project
+        header("location: course_req.php");
+    }
+    else
+    {
+        //create a session variable to display the message
+        $_SESSION['add'] = "Oops! Failed your request.";
+        //Redirect page to add project
+        header("location: course_req.php");
+    }
+  }
+
+?>
