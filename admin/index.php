@@ -29,7 +29,7 @@
                <div class="col-4 text-center">
                 <h1>Instructor List</h1>
                 <br/>
-                <a href="doctor-list.php" class="btn-primary">View</a>
+                <a href="instructor-list.php" class="btn-primary">View</a>
                </div>
 
                <div class="col-4 text-center">

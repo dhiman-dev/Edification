@@ -20,7 +20,7 @@
     <div class="login-wrapper">
         <div class="login-container">
             <div class="login-row">
-                <button id="admin-btn"> <a href="admin_login.php">Admin</button>
+                <button id="admin-btn"> <a href="login-admin.php">Admin</button>
                 <img src="img/admin2.png" alt="Admin"> <a href="admin_login.php">
             </div>
             <div class="login-row">

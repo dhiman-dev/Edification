@@ -45,7 +45,7 @@
 
                   <!-- display admin -->
                   <?php 
-                        $sql = "SELECT * FROM admin where current_status In (2,1)";
+                        $sql = "SELECT * FROM admin where status In (2,1)";
                         //execute the querry
                         $res = mysqli_query($conn, $sql) or die(mysqli_error());
 
@@ -64,17 +64,18 @@
                                     while($rows=mysqli_fetch_assoc($res))
                                     {
                                           $id=$rows['id'];
-                                          $full_name=$rows['ad_name'];
+                                          $first_name=$rows['First_name'];
+                                          $last_name=$rows['last_name'];
                                           $email=$rows['email'];
                                           $username=$rows['username'];
-                                          $status=$rows['current_status'];
+                                          $status=$rows['status'];
                                           if($status==2)
                                           {
                                                 ?>
 
                                                       <tr>
                                                       <td><?php echo $serial_number++ ; ?></td>
-                                                      <td><?php echo $full_name ; ?></td>
+                                                      <td><?php echo $first_name." ". $last_name ; ?></td>
                                                       <td><?php echo $username ; ?></td>
                                                       <td><?php echo $email ; ?></td>
                                                       <td>
@@ -90,7 +91,7 @@
 
                                                       <tr>
                                                       <td><?php echo $serial_number++ ; ?></td>
-                                                      <td><?php echo $full_name ; ?></td>
+                                                      <td><?php echo $first_name." ". $last_name ; ?></td>
                                                       <td><?php echo $username ; ?></td>
                                                       <td><?php echo $email ; ?></td>
                                                       <td>

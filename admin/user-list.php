@@ -12,17 +12,18 @@
                <table class="table">
                   <tr>
                         <th>S.N.</th>
-                        <th>Full Name</th>
+                        <th>Name</th>
                         <th>Username</th>
+                        <th>Age</th>
+                        <th>Education</th>
                         <th>E-mail</th>
-                        <th>Contact No.</th>
                   </tr>
 
                   <!-- display admin -->
                   <?php 
                         $sql = "SELECT * FROM users";
                         //execute the querry
-                        $res = mysqli_query($conn, $sql) or die(mysqli_error());
+                        $res = mysqli_query($conn, $sql);
 
                         // check whether the query is executed or not
                         if($res==TRUE)
@@ -38,19 +39,21 @@
                                     //we have data in database
                                     while($rows=mysqli_fetch_assoc($res))
                                     {
-                                          $id=$rows['id'];
-                                          $full_name=$rows['Full_Name'];
-                                          $email=$rows['email'];
+                                          //$id=$rows['id'];
+                                          $full_name=$rows['full_name'];
+                                          $email=$rows['mail'];
                                           $username=$rows['username'];
-                                          $contact=$rows['contact_no'];
+                                          $education=$rows['education'];
+                                          $age = $rows['age'];
 
                                     ?>
                                     <tr>
                                           <td><?php echo $serial_number++ ; ?></td>
                                           <td><?php echo $full_name ; ?></td>
                                           <td><?php echo $username ; ?></td>
+                                          <td><?php echo $age ; ?></td>
+                                          <td><?php echo $education ; ?></td>
                                           <td><?php echo $email ; ?></td>
-                                          <td><?php echo $contact ; ?></td>
                                     </tr>
 
                                     <?php

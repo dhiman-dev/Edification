@@ -18,9 +18,9 @@
               <li><a href="index.php"> Home </a></li>
               <li><a href="manage-course.php"> Course</a></li>
               <!-- <li><a href="donation-details.php"> Donation</a></li> -->
-              <li><a href="verification.php">Course Request</a></li>
+              <li><a href="verification_course_req.php">Course Request</a></li>
               <li><a href="manage-admin.php"> Manage</a></li>
-              <!-- <li><a href="manage-volunteer-admin.php"> Volunteer</a></li> -->
+              <li><a href="manage-instructor.php">Instructor</a></li>
               <li><a href="admin-logout.php"> Logout</a></li>
               </ul>
         </div>
