@@ -101,6 +101,12 @@
                     <a href="course_req.php">Request Course</a>
                     </button>
                 </div>
+
+                <div class="request">
+                    <button class="reqbtn">
+                    <a href="course_req.php">Request Course</a>
+                    </button>
+                </div>
         <?php
             }
         }
