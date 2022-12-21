@@ -95,6 +95,12 @@
                 <div class="go_back">
                     <a href="dashboard.php">Go Back</a>
                 </div>
+
+                <div class="request">
+                    <button class="reqbtn">
+                    <a href="course_req.php">Request Course</a>
+                    </button>
+                </div>
         <?php
             }
         }
@@ -109,17 +115,23 @@
 <style>
     .go_back{
         position: absolute;
-        right: 230px;
+        left: 1200px;
         bottom: 30px;
-        background: gray;
-        padding: 25px 40px;
+        background: red;
+        padding: 20px 15px;
         text-align: center;
         border-radius: 10px;
-        font-size: 25px;
+        font-size: 30px;
     }
 
-    .go_back:hover {
-        background-color: red;
-        /* cursor: pointer; */
+    .reqbtn{
+        position: absolute;
+        left: 600px;
+        bottom: 30px;
+        background: green;
+        padding: 20px 15px;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 30px;
     }
 </style>
