@@ -113,6 +113,7 @@
 
         $password = stripslashes($_REQUEST['password']);
         $password = mysqli_real_escape_string($con, $password);
+        // $password = md5($password);
         
         $mail = stripslashes($_REQUEST['mail']);
         $mail = mysqli_real_escape_string($con, $mail);
