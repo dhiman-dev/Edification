@@ -93,12 +93,12 @@
                 </div>
 
                 <div class="go_back">
-                    <a href="dashboard.php">Go Back</a>
+                    <a style="text-decoration:none" href="dashboard.php">Go Back</a>
                 </div>
 
                 <div class="request">
                     <button class="reqbtn">
-                    <a href="course_req.php">Request Course</a>
+                    <a style="text-decoration:none" href="course_req.php">Request Course</a>
                     </button>
                 </div>
         <?php
@@ -107,7 +107,6 @@
         ?>
     </section>
 </body>
-
 </html>
 
 
