@@ -1,6 +1,5 @@
 <?php
-include("connection.php");
-include("header.php");
+    include("header.php");
 ?>
 
 <?php
@@ -16,11 +15,15 @@ if ($result == TRUE) {
     $user = mysqli_fetch_assoc($result);
     $full_name = $user['full_name'];
     $username = $user['username'];
+    $user_id = $user['user_id'];
     $email = $user['mail'];
     $education = $user['education'];
     $age = $user['age'];
     $password = $user['password'];
+    $profile_pic = $user['profile_pic'];
 }
+// Display the profile picture
+echo "<img src='$profile_pic'>";
 ?>
 
 
@@ -40,6 +43,7 @@ if ($result == TRUE) {
         <br> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         <img src="img/user (1).png" alt="" height="350px"> <br> <br>
         <p>
+            User ID: <?php echo $user_id; ?><br>
             Name: <?php echo $full_name; ?><br>
             Username: <?php echo $username; ?><br>
             Mail: <?php echo $email; ?><br>
@@ -50,68 +54,113 @@ if ($result == TRUE) {
     </div>
 
     <div class="inputField">
-        <div>
-            <form method="post" action=""> <br>
-                <input type="text" id="name" name="name" style="font-size: 30px; height: 70px; width: 480px; margin-left: 250px; border-radius: 15px; padding: 20px;" value="<?php echo $full_name; ?>"><br><br>
+        <form action="update_profile.php" method="post">
+            <label for="profile_pic">Picture:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="file" id="profile_pic" name="profile_pic"> <br>
 
-                <input type="text" id="username" name="username" style="font-size: 30px; height: 70px; width: 480px; margin-left: 250px; border-radius: 15px; padding: 20px;" value="<?php echo $username; ?>"><br><br>
+            <label for="name">Full Name:</label>
+            <input type="text" id="full_name" name="full_name"> <br>
 
-                <input type="email" id="email" name="email" style="font-size: 30px; height: 70px; width: 480px; margin-left: 250px; border-radius: 15px; padding: 20px;" value="<?php echo $email; ?>"><br><br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username"> <br>
 
-                <input type="text" id="education" name="education" style="font-size: 30px; height: 70px; width: 480px; margin-left: 250px; border-radius: 15px; padding: 20px;" value="<?php echo $education; ?>"><br><br>
+            <label for="email">Email:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="email" id="email" name="email"> <br>
 
-                <input type="number" id="age" name="age" style="font-size: 30px; height: 70px; width: 480px; margin-left: 250px; border-radius: 15px; padding: 20px;" value="<?php echo $age; ?>"><br><br>
+            <label for="education">Education:</label>
+            <input type="text" id="education" name="education"> <br>
 
-                <input type="text" id="name" name="name" style="font-size: 30px; height: 70px; width: 480px; margin-left: 250px; border-radius: 15px; padding: 20px;" value="<?php echo $password; ?>">
-                <br><br><br><br>
-            </form>
-        </div><br><br>
+            <label for="age">Age:</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+            <input type="number" id="age" name="age"> <br>
+
+            <label for="password">Password:</label>
+            <input type="text" id="password" name="password"> <br>
+
+            <!-- editing -->
+            <input type="hidden" name="user_id" value="<?php echo $user_id; ?>">
+
+            <br><br>
+            <button id="btnEdt" name="btnEdt" type="submit">Update</button>
+        </form>
     </div>
-    <br> <br>
-    <button id="btnEdt" type="submit" value="">
-        Update
-    </button>
+    <!-- <button id="backBtn" type="submit" onclick="window.location='dashboard.php'">Back</button> -->
 </body>
 
 </html>
 
 
+
+
+
+
+
+
+
+
+
+
 <style>
-    button#btnEdt {
-        height: 50px;
-        width: 150px;
-        font-size: 25px;
-        color: black;
-        border-radius: 12px;
-        color: green;
-        margin-left: 18in;
+    .inputField {
+        background-color: lightgray;
+        border-radius: 20px;
+        width: 50%;
+        padding: 20px;
+        margin-left: 43%;
+        margin-top: -6.75in;
     }
 
+    label {
+        font-size: 35px;
+    }
+
+    input[type="text"] {
+        margin: 10px 0;
+        width: 550px;
+        height: 70px;
+        font-size: 35px;
+        border-radius: 10px;
+        border: 3px solid green;
+        padding: 20px;
+    }
+
+    input[type="email"] {
+        width: 550px;
+        height: 70px;
+        font-size: 35px;
+        border-radius: 10px;
+        border: 3px solid green;
+        padding: 10px;
+    }
+
+    input[type="file"] {
+        width: 440px;
+        height: 70px;
+        font-size: 35px;
+        border-radius: 10px;
+        border: 3px solid green;
+        padding: 10px;
+    }
+
+    input[type="number"] {
+        width: 550px;
+        height: 70px;
+        font-size: 35px;
+        border-radius: 10px;
+        border: 3px solid green;
+        padding: 10px;
+    }
 
     .userInfo {
         width: 600px;
         height: 650px;
         background-color: lightgray;
-        border: 2px black;
+        border: 3px black;
         border-radius: 15px;
         font-family: Arial, sans-serif;
         font-size: 18px;
-        margin-left: 2in;
+        margin-left: 1.7in;
         margin-top: 50px;
     }
-
-    .inputField {
-        width: 1000px;
-        height: 650px;
-        background-color: lightgray;
-        border: 2px black;
-        border-radius: 15px;
-        font-family: Arial, sans-serif;
-        font-size: 18px;
-        margin-left: 10in;
-        margin-top: -6.75in;
-    }
-
 
     p {
         font-size: 30px;
@@ -119,15 +168,25 @@ if ($result == TRUE) {
         margin-left: 35px;
     }
 
-    label {
-        display: inline-block;
-        width: 120px;
-        text-align: right;
-        margin-right: 10px;
+    button#btnEdt {
+        height: 50px;
+        width: 150px;
+        font-size: 25px;
+        color: black;
+        border-radius: 12px;
+        color: green;
+        margin-left: 8in;
     }
 
-    input {
-        display: inline-block;
-        width: 300px;
+    button#backBtn {
+        height: 50px;
+        width: 150px;
+        font-size: 25px;
+        color: black;
+        border-radius: 12px;
+        color: green;
+        margin-left: 14in;
+        margin-top: 20px;
+        text-decoration: none;
     }
 </style>

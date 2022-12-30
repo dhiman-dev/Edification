@@ -130,14 +130,11 @@
         $result = mysqli_query($con, $query);
         
         if ($result) {
-          // echo "<script>alert('You are registered successfully.')</script>";
-            echo "<div class='form'>
-                  <h3>You are registered successfully.</h3><br/>
-                  <p class='link'>Click here <a href='login.php'>Login</a></p>
-                  </div>";
+            echo "<script>alert('account created successfully.'); window.location.href = 'login.php';</script>"; 
         } 
         else {
-          echo "<script>alert('Required fields are missing.')</script>";
+          // echo "<script>alert('Required fields are missing.')</script>";
+          echo "<script>alert('something went wrong. please retry'); window.location.href = 'signup.php';</script>"; 
         }
     } 
 ?>

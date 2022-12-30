@@ -44,7 +44,7 @@
                     <li><a href="profile.php"> <img src="img/profile_pic.jpg" style="width: 35px;"> Profile</a></li>
                     <li><a href="dashboard.php"> <img src="img/home_pic.png" style="width: 35px;"> Home</a></li>
                     <li><a href="#"> <img src="img/courses.png" style="width: 35px;"> Courses</a></li>
-                    <li><a href="#"> <img src="img/edit.png" style="width: 35px;"> Edit</a></li>
+                    <li><a href="edit_profile.php"> <img src="img/edit.png" style="width: 35px;"> Edit</a></li>
                     <li><a href="#"> <img src="img/setting.png" style="width: 35px;"> Setting</a></li>
                     <li><a href="logout.php"> <img src="img/logout.png" style="width: 35px;"> Log Out</a></li>
                 </ul>
