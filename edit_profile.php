@@ -1,5 +1,5 @@
 <?php
-include("header.php");
+    include("header.php");
 ?>
 
 <?php
@@ -20,7 +20,10 @@ if ($result == TRUE) {
     $education = $user['education'];
     $age = $user['age'];
     $password = $user['password'];
+    $profile_pic = $user['profile_pic'];
 }
+// Display the profile picture
+echo "<img src='$profile_pic'>";
 ?>
 
 
@@ -56,7 +59,7 @@ if ($result == TRUE) {
             <input type="file" id="profile_pic" name="profile_pic"> <br>
 
             <label for="name">Full Name:</label>
-            <input type="text" id="name" name="name"> <br>
+            <input type="text" id="full_name" name="full_name"> <br>
 
             <label for="username">Username:</label>
             <input type="text" id="username" name="username"> <br>
@@ -98,12 +101,12 @@ if ($result == TRUE) {
 
 <style>
     .inputField {
-        background-color: gray;
+        background-color: lightgray;
         border-radius: 20px;
         width: 50%;
         padding: 20px;
-        margin-left: 45%;
-        margin-top: -6.5in;
+        margin-left: 43%;
+        margin-top: -6.75in;
     }
 
     label {
