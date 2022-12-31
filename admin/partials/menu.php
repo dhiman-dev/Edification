@@ -4,12 +4,13 @@ include('login-check-admin.php');
 ?>
 
 <html>
-
 <head>
     <title>Admin - Home Page</title>
     <link rel="stylesheet" href="../css/admin.css">
 </head>
+
 <body>
+
     <!--Menu starts-->
     <div class="dash-nav">
         <ul>
@@ -32,11 +33,11 @@ include('login-check-admin.php');
             <!-- <input type="submit" value="Submit"> -->
         </form>
     </div>
-
     <!-- search ends here -->
 
 </body>
 
+<!-- css  -->
 <style>
     .dash-nav {
         background: #D9D9D9;
@@ -89,14 +90,10 @@ include('login-check-admin.php');
         padding-left: 10px;
         padding-bottom: 0;
     }
-    
-    /* aint working yet */
-    /* body::before {
-      background-image: url('..\img\dashboard_backgroud.png');
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      background-size: cover;
-      opacity: 10;
+
+    /* .bgImg::before {
+        background-repeat: no-repeat;
+        background-size: cover;
+        left: 100px;
     } */
-    
 </style>
