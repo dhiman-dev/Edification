@@ -22,8 +22,6 @@ if ($result == TRUE) {
     $password = $user['password'];
     $profile_pic = $user['profile_pic'];
 }
-// Display the profile picture
-echo "<img src='$profile_pic'>";
 ?>
 
 

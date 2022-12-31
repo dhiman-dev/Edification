@@ -7,8 +7,7 @@
               <br><br>
 
               <?php 
-                if(isset($_SESSION['login']))
-                {
+                if(isset($_SESSION['login'])){
                     echo $_SESSION['login'];
                     unset($_SESSION['login']);
                 }
@@ -18,6 +17,7 @@
 
 
             
+            <br/> <br/> <br/>
             <br/> <br/> <br/>
 
                <div class="col-4 text-center">

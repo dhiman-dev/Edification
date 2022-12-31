@@ -78,3 +78,13 @@
 
 
         <?php include('partials/footer.php'); ?>       
+
+        <style>
+            tr {
+                background-color: #6a747c;
+                color: white;
+                height: 50px;
+                width: 40px;
+                border-radius: 20px;
+        }
+        </style>

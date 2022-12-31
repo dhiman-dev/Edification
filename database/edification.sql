@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 17, 2022 at 09:20 PM
+-- Generation Time: Dec 31, 2022 at 04:36 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -43,7 +43,8 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`First_name`, `last_name`, `username`, `email`, `password`, `status`, `id`) VALUES
 ('Sunil', 'Ganguly', 'sontu', 'sganguly@gmail.com', '29e0e564dbeed95385b7c343bff1b9a3', 2, 1),
-('Abdur', 'Rahman', 'ar7', 'arahman202260@bscse.uiu.ac.bd', '5fc48f84a6a20f105b884889d1e69cf4', 1, 3);
+('Abdur', 'Rahman', 'ar7', 'arahman202260@bscse.uiu.ac.bd', '5fc48f84a6a20f105b884889d1e69cf4', 1, 3),
+('Samman', 'Tasnim', 'st', 'st@mail.com', '1234', 0, 4);
 
 -- --------------------------------------------------------
 
@@ -69,14 +70,12 @@ INSERT INTO `all_courses` (`course_name`, `instructor`, `status`, `course_id`, `
 ('Introduction to Computer Science', 'Abdur Rahman', 1, 'ICS 2022', 'sontu', 'sganguly@gmail.com', 1),
 ('Data Structure 1', 'Nurul Huda', 1, 'DSA 1', 'sontu', 'sganguly@gmail.com', 2),
 ('Structured Programming Language', 'Shoeb Ahmed', 1, 'SPL 2022', 'sontu', 'sganguly@gmail.com', 3),
-('Database Management Lab', 'Mohaiminul Islam', 0, 'DBMS Lab', 'sontu', 'sganguly@gmail.com', 4),
-('Theory of Computation', 'Nabila Swarna', 0, 'TOC 2022', 'sontu', 'sganguly@gmail.com', 5),
+('Database Management Lab', 'Mohaiminul Islam', 1, 'DBMS Lab', 'sontu', 'sganguly@gmail.com', 4),
 ('Machine Learning', 'Mofijur Rahman', 1, 'ML 2022', 'sontu', 'sganguly@gmail.com', 6),
-('Computer Networking', 'Gourob Saha', 1, 'CN 2022', 'sontu', 'sganguly@gmail.com', 12),
 ('Artificial Intelligence', 'Mofijur Rahman', 1, 'AI 03', 'sontu', 'sganguly@gmail.com', 13),
-('Data Structure 2', 'Akib Zaman', 0, 'DSA 2', 'sontu', 'sganguly@gmail.com', 14),
-('Database', 'y', 0, 'DBMS', 'sontu', 'sganguly@gmail.com', 15),
-('Bioinformetics', 'Somrat Abdul Jolil', 1, 'BI 2022', 'sontu', 'sganguly@gmail.com', 16);
+('Data Structure 2', 'Akib Zaman', 1, 'DSA 2', 'sontu', 'sganguly@gmail.com', 14),
+('Bioinformetics', 'Somrat Abdul Jolil', 1, 'BI 2022', 'sontu', 'sganguly@gmail.com', 16),
+('Cyber Security', 'Abdur Rahman', 1, 'CyberSecur', 'ar', 'ar@edification.com', 18);
 
 -- --------------------------------------------------------
 
@@ -101,7 +100,9 @@ INSERT INTO `request_course` (`course_name`, `id`, `description`, `current_statu
 ('SPL LAB', 6, 'eeeeeeeee', 0),
 ('Mathematics 3', 7, 'fefewggwggwgwg', 0),
 ('ttntntntn', 8, 'ebnbebnebe', 0),
-('ghbbb', 9, 'rfbbbfdbfdb', 0);
+('ghbbb', 9, 'rfbbbfdbfdb', 0),
+('data', 20, 'jnkjbnbkbbhj', 0),
+('ca', 21, 'I', 0);
 
 -- --------------------------------------------------------
 
@@ -110,20 +111,22 @@ INSERT INTO `request_course` (`course_name`, `id`, `description`, `current_statu
 --
 
 CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
   `full_name` varchar(100) NOT NULL,
   `username` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
   `mail` varchar(100) NOT NULL,
   `age` int(100) NOT NULL,
-  `education` varchar(100) NOT NULL
+  `education` varchar(100) NOT NULL,
+  `profile_pic` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`full_name`, `username`, `password`, `mail`, `age`, `education`) VALUES
-('Dhiman Mozumder', 'dm', '1234', 'dm@gmail.com', 23, 'tdtfghh');
+INSERT INTO `users` (`user_id`, `full_name`, `username`, `password`, `mail`, `age`, `education`, `profile_pic`) VALUES
+(1, 'Abdur Rahman', 'ar', '1234', 'ar@gmail.com', 21, 'uiu', NULL);
 
 --
 -- Indexes for dumped tables
@@ -151,7 +154,8 @@ ALTER TABLE `request_course`
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`username`);
+  ADD PRIMARY KEY (`user_id`),
+  ADD UNIQUE KEY `username` (`username`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -161,19 +165,25 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `all_courses`
 --
 ALTER TABLE `all_courses`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `request_course`
 --
 ALTER TABLE `request_course`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

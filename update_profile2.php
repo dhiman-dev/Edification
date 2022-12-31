@@ -13,31 +13,20 @@ if (isset($_POST['btnEdt'])) {
   $age = $_POST['age'];
   $password = $_POST['password'];
 
-
-  if (isset($_POST['btnEdt'])) {
-    // process the form data
-    $tmp_file = $_FILES['file_upload']['tmp_name'];
-    $target_file = basename($_FILES['file_upload']['name']);
-    $upload_dir = "img/profile";
-
-    if (move_uploaded_file($tmp_file, $upload_dir . "/" . $target_file)) {
-      $message = "File uploaded successfully.";
-    } 
-    else {
-      $error = $_FILES['file_upload']['error'];
-      $message = $upload_errors[$error];      
-    }
-  }
-
   // Check if a new profile picture has been uploaded
   if (isset($_FILES['profile_pic'])) {
+
+    // something needs to be done here
+
+    // $imagename = $_FILES["imagename"]["name"];
+    // move_uploaded_file($_FILES["imagename"]["tmp_name"], "media/" . $_FILES["imagename"]["name"]);
+
     // Create the UPDATE query
-    $query = "UPDATE users SET full_name = '$full_name', username = '$username', mail = '$email', education = '$education', age = '$age', password = '$password', profile_pic = '$target_file' WHERE user_id = '$user_id'";
+    $query = "UPDATE users SET full_name = '$full_name', username = '$username', mail = '$email', education = '$education', age = '$age', password = '$password', profile_pic = '$imagename' WHERE user_id = '$user_id'";
   } else {
     // Create the UPDATE query without the profile picture
     $query = "UPDATE users SET full_name = '$full_name', username = '$username', mail = '$email', education = '$education', age = '$age', password = '$password' WHERE user_id = '$user_id'";
   }
-
 
   // execute the query
   $result = mysqli_query($con, $query);
