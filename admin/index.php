@@ -19,20 +19,20 @@
             <a href="user-list.php" class="btn-primary">View</a>
         </div> 
 
-        <div class="def">
-            <img src="..\img\instrctr.png" height="400px" width="350">
-            <h1>Instructor_List</h1>
-            <br />
-            <a href="instructor-list.php" class="btn-primary">View</a>
-        </div>
-
         <div class="ijk">
             <img src="..\img\admin2.png" height="400px" width="350">
             <h1>Admin_List</h1>
             <br />
             <a href="admin-list.php" class="btn-primary">View</a>
         </div>
-
+        
+        <div class="def">
+            <img src="..\img\instrctr.png" height="500px" width="400">
+            <h1>Instructor_List</h1>
+            <br />
+            <a href="instructor-list.php" class="btn-primary">View</a>
+        </div>
+        
         <div class="clearfix"></div>
     </div>
 </div>
