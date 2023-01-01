@@ -1,168 +1,65 @@
-/* 
-code by dhiman
-*/
 
-*{
-    margin: 0;
-    padding: 0;
-    font-size: 'Poppins', sans-serif;
+/* test */
+#main-header {
+    display: flex;
+    justify-content: space-between;
 }
 
-.wrapper{
-    padding: 1%;
-    width: 80%;
-    margin: 0 auto;
+.dash-nav {
+    background: #D9D9D9;
+    border-radius: 20px;
+    align-self: center;
+    margin-left: 90px;
+    margin-top: 17px;
 }
 
-.text-center{
+.dash-nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 17px 10px;
+
+}
+
+.dash-nav ul li {
+    list-style: none;
+    margin-right: 50px;
+}
+
+.dash-nav ul li a {
+    font-family: 'Quicksand';
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 50px;
+    color: #222;
+    padding: 10px;
+}
+
+.dash-nav ul li a:hover {
+    color: #f2a6a6;
+}
+
+.dashboard {
+    height: 70vh;
+    background: url(img/dashboard_backgroud.png);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.greet {
     text-align: center;
+    margin-top: 28vh;
 }
 
-.clearfix{
-    float: none;
-    clear: both;
+.greet h3 {
+    font-family: 'Bebas';
+    font-size: 50px;
+    padding-bottom: 10px;
+    font-weight: 700;
 }
 
-.table{
-    width: 100%;
+.greet p {
+    font-weight: 700;
+    letter-spacing: 2px;
 }
-
-.table-30{
-    width: 30%;
-}
-
-.table tr th{
-    border-bottom: 1px solid black;
-    padding: 1%;
-    text-align: left;
-}
-
-.table tr td{
-    padding: 1%;
-}
-
-/* for admin manage button*/
-.btn-primary{
-    background-color: #1e90ff;
-    padding: 1%;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
-.btn-primary:hover{
-    background-color: #3742fa;
-}
-
-
-
-.btn-secondary{
-    background-color: #7bed9f;
-    padding: 1%;
-    text-decoration: none;
-    color: black;
-}
-
-.btn-secondary:hover{
-    background-color: #2ed573;
-}
-
-
-.btn-danger{
-    background-color: #ff4757;
-    padding: 1%;
-    text-decoration: none;
-    color: black;
-}
-
-.btn-danger:hover{
-    background-color: #ff6b81;
-}
-
-.success{
-    color: #2ed573;
-}
-
-.error{
-    color: #ff4757;
-}
-
-/* css for menu */
-.menu{
-    text-align: right;
-    background-color: #2d3436;
-}
-.menu ul{
-    list-style-type: none;
-}
-
-.menu ul li{
-    display: inline;
-    padding:1%;
-}
-
-.menu ul li a{
-    text-decoration: none;
-    font-weight: bold;
-    color:#00cec9;
-}
-
-.menu ul li a:hover{
-    color: #81ecec;
-}
-
-/* css for content */
-.content{
-    background-color: whitesmoke;
-    padding: 3% 0;
-}
-
-.col-4{
-    width: 19%;
-    background-color: white;
-    margin: 1%;
-    padding: 2%;
-    float: left;
-}
-
-/* css for add project image */
-
-
-/* css for footer */
-
-.footer{
-    background-color: #00cec9;
-    color: white;
-}
-
-
-/* CSS for Login */
-.login{
-    border: 1px solid grey;
-    width: 20%;
-    margin: 10% auto;
-    padding: 2%;
-}
-
-/*css for update profile */
-
-
-
-/* Button used to open the contact form - fixed at the bottom of the page */
-
-.open-button {
-background-color: #70a1ff;
-color: white;
-padding: 16px 20px;
-border: none;
-cursor: pointer;
-opacity: 0.8;
-position: fixed;
-border-bottom: 23px;
-right: 28px;
-width: 280px;
-}
-.open-button:hover{
-    color: #1e90ff;
-}
-
